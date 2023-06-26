@@ -1,0 +1,16 @@
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\bin\Debug\WpfPostCompany.exe.config
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\bin\Debug\WpfPostCompany.exe
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\bin\Debug\WpfPostCompany.pdb
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.AssemblyReference.cache
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\LoginWindow.g.cs
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\App.g.cs
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.cache
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.lref
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\LoginWindow.baml
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.g.resources
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.Properties.Resources.resources
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.GenerateResource.cache
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CoreCompileInputs.cache
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.exe
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.pdb
