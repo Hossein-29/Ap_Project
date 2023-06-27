@@ -36,9 +36,7 @@ namespace WpfPostCompany
             else if (PasswordInput.Text == "")
             {
                 MessageBox.Show("Invalid Password");
-                UserNameInput.Text = "";
-                PasswordInput.Text = "";
-            }
+            
         }
 
         private void SignUpEmployeesBtn(object sender, RoutedEventArgs e)
