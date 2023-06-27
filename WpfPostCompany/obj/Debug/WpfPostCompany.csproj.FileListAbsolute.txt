@@ -14,3 +14,22 @@ C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostC
 C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CoreCompileInputs.cache
 C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.exe
 C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.pdb
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\WpfPostCompany.exe.config
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\WpfPostCompany.exe
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\WpfPostCompany.pdb
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\DataAccess.dll
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\DataAccess.pdb
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.AssemblyReference.cache
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.SuggestedBindingRedirects.cache
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\LoginWindow.g.cs
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\App.g.cs
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.cache
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.lref
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\LoginWindow.baml
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.g.resources
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.Properties.Resources.resources
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.GenerateResource.cache
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CoreCompileInputs.cache
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CopyComplete
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.exe
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.pdb

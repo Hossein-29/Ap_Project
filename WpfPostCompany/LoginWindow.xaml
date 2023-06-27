@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
         Title="LoginWindow" Width="1250" Height="720" Topmost="True" FlowDirection="LeftToRight" Left="-10" Top="0">
+    
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -43,13 +44,15 @@
             </TextBox>
 
             <Label BorderBrush="Transparent" Content="Password" HorizontalAlignment="Left" Margin="42,217,0,0" VerticalAlignment="Top" Height="35" Width="100" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox HorizontalAlignment="Left" Margin="68,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="Transparent">
+            <TextBox HorizontalAlignment="Left" Margin="68,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" BorderBrush="#FFFAFAFA">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Opacity="0.4" Direction="325"/>
                 </TextBox.Effect>
             </TextBox>
+            <Label Content="Don't have an account?" Margin="121,451,129,0" VerticalAlignment="Top" Height="38" FontSize="14" Foreground="#FF919191" Width="200" Padding="28,7,5,5"/>
+            <Button Content="Sign Up Now" Margin="150,491,150,0" VerticalAlignment="Top" FontFamily="Arial Black" FontWeight="Bold" Height="24" Width="150" Padding="15,5,20,5" Background="#FFFAFAFA" BorderThickness="0" Cursor="Arrow"/>
         </Grid>
-        <Button Grid.Column="1" Content="Login" Margin="104,413,104,0" Grid.Row="1" VerticalAlignment="Top" Height="50" BorderBrush="White" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow">
+        <Button Grid.Column="1" Content="Login" Margin="104,363,104,0" Grid.Row="1" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>

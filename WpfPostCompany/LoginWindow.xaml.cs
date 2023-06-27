@@ -22,6 +22,9 @@ namespace WpfPostCompany
         public LoginWindow()
         {
             InitializeComponent();
+           
         }
+
+      
     }
 }
