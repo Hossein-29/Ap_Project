@@ -16,7 +16,7 @@
 
 
         <Label Content="Employee Panel" Margin="436,8,394,0" VerticalAlignment="Top" FontSize="50" FontFamily="Forte" Padding="16,2,8,5" Foreground="White"/>
-        <Button Content="Register Costumer" Margin="135,450,798,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="RegisterCostumerBtn">
+        <Button Content="Register Costumer" Margin="130,117,803,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="RegisterCostumerBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -79,7 +79,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Order Registration" Margin="134,99,774,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="OrderRegistrationBtn">
+        <Button Content="Order Registration" Margin="131,440,777,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="OrderRegistrationBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>

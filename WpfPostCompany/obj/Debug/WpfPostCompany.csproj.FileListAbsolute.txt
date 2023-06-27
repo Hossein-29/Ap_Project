@@ -37,5 +37,5 @@ C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\SignUpEmploye
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\SignUpEmployeesWindow.baml
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\EmployeePanel.g.cs
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\EmployeePanel.baml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\RegisterCostumer.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\RegisterCostumer.baml
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\RegisterCostumerWindow.g.cs
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\RegisterCostumerWindow.baml

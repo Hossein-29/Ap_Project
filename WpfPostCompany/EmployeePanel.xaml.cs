@@ -36,7 +36,7 @@ namespace WpfPostCompany
 
         private void RegisterCostumerBtn(object sender, RoutedEventArgs e)
         {
-            var RegisterCostumer = new RegisterCostumer();
+            var RegisterCostumer = new RegisterCostumerWindow();
             RegisterCostumer.Show();
             this.Close();
         }

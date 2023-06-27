@@ -62,8 +62,8 @@
     <Compile Include="EmployeePanel.xaml.cs">
       <DependentUpon>EmployeePanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegisterCostumer.xaml.cs">
-      <DependentUpon>RegisterCostumer.xaml</DependentUpon>
+    <Compile Include="RegisterCostumerWindow.xaml.cs">
+      <DependentUpon>RegisterCostumerWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SignUpEmployeesWindow.xaml.cs">
       <DependentUpon>SignUpEmployeesWindow.xaml</DependentUpon>
@@ -107,7 +107,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegisterCostumer.xaml">
+    <Page Include="RegisterCostumerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

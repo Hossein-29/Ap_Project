@@ -26,7 +26,7 @@ namespace DataAccess
         }
         public static bool PhoneValidation(string phone)
         {
-            Regex regex = new Regex("^09(0-9){11}$");
+            Regex regex = new Regex("^09[0-9]{9}$");
             if (regex.IsMatch(phone))
                 return true;
             return false;
@@ -42,6 +42,13 @@ namespace DataAccess
         {
             Regex regex = new Regex("^[0-9]{2}9[0-9]{2}$");
             if (regex.IsMatch(personID))
+                return true;
+            return false;
+        }
+        public static bool SSN_Validation(string ssn)
+        {
+            Regex regex = new Regex("^00[0-9]{8}$");
+            if (regex.IsMatch(ssn))
                 return true;
             return false;
         }
