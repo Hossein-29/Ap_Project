@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,9 +27,45 @@ namespace WpfPostCompany
 
         private void SignUpBtn(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
-            loginWindow.Show();
-            this.Close();
+            if (FirstName.Text == "")
+                MessageBox.Show("please enter first name");
+            else if (LastName.Text == "")
+                MessageBox.Show("please enter last name");
+            else if (PersonID.Text == "")
+                MessageBox.Show("please enter personID");
+            else if (UserName.Text == "")
+                MessageBox.Show("please enter userName");
+            else if (Email.Text == "")
+                MessageBox.Show("please enter email");
+            else if (Password.Text == "")
+                MessageBox.Show("please enter password");
+            else if (RePassword.Text == "")
+                MessageBox.Show("please enter password repeat");
+            else
+            {
+                if (!InputValidation.NameValidation(FirstName.Text.ToString()))
+                    MessageBox.Show("invalid firstName");
+                else if (!InputValidation.NameValidation(LastName.Text.ToString()))
+                    MessageBox.Show("invalid lastName");
+                else if (!InputValidation.PersonIDValidation(PersonID.Text.ToString()))
+                    MessageBox.Show("invalid personID");
+                else if (!InputValidation.EmailValidation(Email.Text.ToString()))
+                    MessageBox.Show("invalid email");
+                else if (!InputValidation.EmployeePasswordValidation(Password.Text.ToString()))
+                    MessageBox.Show("invalid password");
+                else if (Password.Text.ToString() != RePassword.Text.ToString())
+                {
+                    MessageBox.Show("password and repeated password are not aqual");
+                    RePassword.Text = "";
+                }
+
+                else
+                {
+                    LoginWindow loginWindow = new LoginWindow();
+                    loginWindow.Show();
+                    this.Close();
+                }
+            }
         }
     }
 }

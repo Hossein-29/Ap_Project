@@ -28,7 +28,7 @@
             <Label Content="Sign Up" Margin="361,13,357,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="22" HorizontalContentAlignment="Center"/>
 
             <Label Content="First Name" Margin="14,76,711,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox HorizontalAlignment="Left" Margin="140,73,0,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <TextBox x:Name="FirstName" HorizontalAlignment="Left" Margin="140,73,0,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -36,21 +36,21 @@
 
 
             <Label Content="Last Name" Margin="432,76,310,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox HorizontalAlignment="Left" Margin="560,72,0,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83">
+            <TextBox x:Name="LastName" HorizontalAlignment="Left" Margin="560,72,0,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
             </TextBox>
 
             <Label Content="Personal ID" Margin="14,158,669,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox HorizontalAlignment="Left" Margin="140,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
+            <TextBox x:Name="PersonID" HorizontalAlignment="Left" Margin="140,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
             </TextBox>
 
             <Label Content="User Name" Margin="432,158,271,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox HorizontalAlignment="Left" Margin="140,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
+            <TextBox x:Name="UserName" HorizontalAlignment="Left" Margin="560,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -58,7 +58,7 @@
 
 
             <Label Content="Email" Margin="14,236,724,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox HorizontalAlignment="Left" Margin="560,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
+            <TextBox x:Name="Email" HorizontalAlignment="Left" Margin="140,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -66,14 +66,14 @@
 
 
             <Label Content="Password" Margin="432,236,317,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox HorizontalAlignment="Left" Margin="560,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
+            <TextBox x:Name="Password" HorizontalAlignment="Left" Margin="560,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
             </TextBox>
-            
-            <Label Content="Repeat Password" Margin="14,306,725,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox HorizontalAlignment="Left" Margin="140,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
+
+            <Label Content="Repeat Password" Margin="14,306,713,0" VerticalAlignment="Top" Height="38" FontFamily="Agency FB" FontSize="18"/>
+            <TextBox x:Name="RePassword" HorizontalAlignment="Left" Margin="140,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
