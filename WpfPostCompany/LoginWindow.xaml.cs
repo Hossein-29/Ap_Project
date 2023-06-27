@@ -25,6 +25,27 @@ namespace WpfPostCompany
            
         }
 
-      
+        private void LoginBtn(object sender, RoutedEventArgs e)
+        {
+            if (UserNameInput.Text == "")
+            {
+                MessageBox.Show("Invalid UserName");
+                UserNameInput.Text = "";
+                PasswordInput.Text = "";
+            }
+            else if (PasswordInput.Text == "")
+            {
+                MessageBox.Show("Invalid Password");
+                UserNameInput.Text = "";
+                PasswordInput.Text = "";
+            }
+        }
+
+        private void SignUpEmployeesBtn(object sender, RoutedEventArgs e)
+        {
+            var SignUpWindow = new SignUpEmployeesWindow();
+            SignUpWindow.Show();
+            this.Close();
+        }
     }
 }

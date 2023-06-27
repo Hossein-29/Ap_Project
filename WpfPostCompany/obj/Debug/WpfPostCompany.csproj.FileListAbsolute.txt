@@ -33,3 +33,5 @@ C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompan
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CopyComplete
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.exe
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.pdb
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\SignUpEmployeesWindow.g.cs
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\SignUpEmployeesWindow.baml
