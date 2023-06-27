@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -61,7 +62,10 @@ namespace WpfPostCompany
 
                 else
                 {
+                    MessageBox.Show("Sign Up Successfully");
                     LoginWindow loginWindow = new LoginWindow();
+                    Thread.Sleep(2000);
+                
                     loginWindow.Show();
                     this.Close();
                 }

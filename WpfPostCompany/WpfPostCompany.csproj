@@ -59,6 +59,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EmployeePanel.xaml.cs">
+      <DependentUpon>EmployeePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterCostumer.xaml.cs">
+      <DependentUpon>RegisterCostumer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SignUpEmployeesWindow.xaml.cs">
       <DependentUpon>SignUpEmployeesWindow.xaml</DependentUpon>
     </Compile>
@@ -93,7 +99,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="EmployeePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegisterCostumer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

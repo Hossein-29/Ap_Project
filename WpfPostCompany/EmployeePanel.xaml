@@ -1,0 +1,147 @@
+﻿<Window x:Class="WpfPostCompany.EmployeePanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPostCompany"
+        mc:Ignorable="d"
+        Title="EmployeePanel" Height="720" Width="1250" Topmost="True" FlowDirection="LeftToRight" Top="0" Left="-10">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+
+        <Label Content="Employee Panel" Margin="436,8,394,0" VerticalAlignment="Top" FontSize="50" FontFamily="Forte" Padding="16,2,8,5" Foreground="White"/>
+        <Button Content="Register Costumer" Margin="135,450,798,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="RegisterCostumerBtn">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-72.5" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFCFCFC" Offset="0"/>
+                    <GradientStop Color="#FF372C3C" Offset="0.938"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Send Package Delivery Email" Margin="203,281,684,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="SendDeliveryEmail">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-72.5" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFCFCFC" Offset="0"/>
+                    <GradientStop Color="#FF372C3C" Offset="0.938"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Display Package Information" Margin="685,281,202,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="DisplayPackageInfoBtn">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-72.5" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFCFCFC" Offset="0"/>
+                    <GradientStop Color="#FF372C3C" Offset="0.938"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Order Registration" Margin="134,99,774,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="OrderRegistrationBtn">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-72.5" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFCFCFC" Offset="0"/>
+                    <GradientStop Color="#FF372C3C" Offset="0.938"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Reporting Of Orders" Margin="767,100,135,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="ReportingOfOrdersBtn">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-72.5" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFCFCFC" Offset="0"/>
+                    <GradientStop Color="#FF372C3C" Offset="0.938"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Costumers Comments" Margin="793,438,134,158" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" FontSize="30" Click="ViewCostumerCommentsBtn">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-72.5" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFCFCFC" Offset="0"/>
+                    <GradientStop Color="#FF372C3C" Offset="0.938"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
