@@ -23,7 +23,6 @@ namespace DataAccess.Models
         int id { get; set; }
         string senderAddress { get; set; }
         string recieverAddress { get; set; }
-
         bool isExpensive { get; set; }
         string recieverPhoneNumber { get; set; }
     }

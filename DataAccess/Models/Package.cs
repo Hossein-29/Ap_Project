@@ -8,10 +8,22 @@ namespace DataAccess.Models
 {
     public class Package : IPackage
     {
-        public int id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string senderAddress { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string recieverAddress { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool isExpensive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string recieverPhoneNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int id { get; set; }
+        public string senderAddress { get; set; }
+        public string recieverAddress { get; set; }
+        public bool isExpensive { get; set; }
+        public string recieverPhoneNumber { get; set; }
+        public static int num = 1;
+        public static List<Package> packages = new List<Package>();
+
+        public Package(string senderAddress, string recieverAddress, bool isExpensive, string recieverPhoneNumber)
+        {
+            this.id = num++;
+            this.senderAddress = senderAddress;
+            this.recieverAddress = recieverAddress;
+            this.isExpensive = isExpensive;
+            this.recieverPhoneNumber = recieverPhoneNumber;
+            packages.Add(this);
+        }
     }
 }

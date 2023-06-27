@@ -8,7 +8,7 @@ namespace DataAccess.Models
 {
     public interface IPerson
     {
-        int id { get; set; }
+        string id { get; set; }
         string firstName { get; set; }
         string lastName { get; set; }
         string email { get; set; }
