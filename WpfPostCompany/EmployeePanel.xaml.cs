@@ -26,7 +26,9 @@ namespace WpfPostCompany
 
         private void OrderRegistrationBtn(object sender, RoutedEventArgs e)
         {
-
+            var OrderRegistration = new OrderRegistrationWindow();
+            OrderRegistration.Show();
+            this.Close();
         }
 
         private void SendDeliveryEmail(object sender, RoutedEventArgs e)

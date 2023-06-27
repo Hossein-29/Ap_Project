@@ -1,0 +1,102 @@
+﻿<Window x:Class="WpfPostCompany.MainOrderRegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPostCompany"
+        mc:Ignorable="d"
+        Title="MainOrderRegistrationWindow" Height="720" Width="1250" FlowDirection="LeftToRight" Topmost="True" Top="0" Left="-10">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF97A293"/>
+                <GradientStop Color="#FF32878D" Offset="0.616"/>
+                <GradientStop Color="#FF86D8BE"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Grid.Row="0" Content="Employee Panel" VerticalAlignment="Top" FontSize="50" FontFamily="Forte" Padding="16,2,8,5" Foreground="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="2" Margin="199,20,1,0"/>
+        <Grid Grid.Row="1" Grid.Column="1" Background="White">
+            <Label Content="Order Registration" Margin="279,5,280,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="22" HorizontalContentAlignment="Center" Foreground="#FF29D2E3"/>
+
+            <Label Content="Sender Address" Margin="41,59,684,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="20" RenderTransformOrigin="0.536,0.057"/>
+            <TextBox x:Name="SenderAddress" Margin="195,66,168,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+                <TextBox.Effect>
+                    <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
+                </TextBox.Effect>
+            </TextBox>
+
+
+            <Label Content="Reciever Address" Margin="41,129,684,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="20"/>
+            <TextBox x:Name="RecieverAddress" Margin="195,127,166,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+                <TextBox.Effect>
+                    <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
+                </TextBox.Effect>
+            </TextBox>
+
+
+            <Label Content="Package Content Type" HorizontalAlignment="Left" Margin="35,221,0,0" VerticalAlignment="Top" Height="42" Width="170" Padding="7,9,5,5" FontFamily="Agency FB" FontSize="20"/>
+            <ComboBox Margin="233,213,459,274" RenderTransformOrigin="0.497,-0.151">
+                <ComboBoxItem Content="Object"></ComboBoxItem>
+                <ComboBoxItem Content="Document"></ComboBoxItem>
+                <ComboBoxItem Content="Breakable"></ComboBoxItem>
+            </ComboBox>
+            <CheckBox Margin="55,289,743,193">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="2.3" ScaleY="2.3" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <Label Content="Does The Package Contain Expensive Content?" HorizontalAlignment="Left" Margin="124,290,0,0" VerticalAlignment="Top" Width="456" FontFamily="Gadugi" FontSize="20" Foreground="#FFF20F08"/>
+
+
+            <Label Content="Package Weight" Margin="35,354,690,0" VerticalAlignment="Top" Height="40" FontFamily="Agency FB" FontSize="20"/>
+            <TextBox x:Name="PackageWeight" Margin="181,352,462,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+                <TextBox.Effect>
+                    <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Post Type" HorizontalAlignment="Left" Margin="442,221,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="20" Width="100"/>
+
+            <ComboBox Margin="589,213,103,271" Width="NaN">
+                <ComboBoxItem Content="Ordinary Post"></ComboBoxItem>
+                <ComboBoxItem Content="Leading Post"></ComboBoxItem>
+            </ComboBox>
+            <Label Content="Phone(Not Required)" HorizontalAlignment="Left" Margin="442,354,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Agency FB"/>
+            <TextBox x:Name="PhoneNumber" Margin="597,352,46,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+                <TextBox.Effect>
+                    <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
+                </TextBox.Effect>
+            </TextBox>
+            <Button Content="Final Price" Margin="277,433,278,0" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="-72.5" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF32878D" Offset="0.6"/>
+                        <GradientStop Color="#FF86D8BE" Offset="0.1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

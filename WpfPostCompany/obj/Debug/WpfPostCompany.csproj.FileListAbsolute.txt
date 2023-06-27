@@ -39,3 +39,7 @@ C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\EmployeePanel
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\EmployeePanel.baml
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\RegisterCostumerWindow.g.cs
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\RegisterCostumerWindow.baml
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\OrderRegistrationWindow.g.cs
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\OrderRegistrationWindow.baml
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\MainOrderRegistrationWindow.g.cs
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\MainOrderRegistrationWindow.baml
