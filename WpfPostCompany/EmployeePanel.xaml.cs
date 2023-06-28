@@ -55,7 +55,9 @@ namespace WpfPostCompany
 
         private void ReportingOfOrdersBtn(object sender, RoutedEventArgs e)
         {
-
+            var ReportingOrders = new ReportingOfOrdersWindow();
+            ReportingOrders.Show();
+            this.Close();
         }
     }
 }

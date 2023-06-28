@@ -71,6 +71,9 @@
     <Compile Include="RegisterCostumerWindow.xaml.cs">
       <DependentUpon>RegisterCostumerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReportingOfOrdersWindow.xaml.cs">
+      <DependentUpon>ReportingOfOrdersWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SignUpEmployeesWindow.xaml.cs">
       <DependentUpon>SignUpEmployeesWindow.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RegisterCostumerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportingOfOrdersWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

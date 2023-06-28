@@ -29,7 +29,7 @@
             <Label Content="Order Registration" Margin="279,5,280,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="22" HorizontalContentAlignment="Center" Foreground="#FF29D2E3"/>
 
             <Label Content="Sender Address" Margin="41,59,684,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="20" RenderTransformOrigin="0.536,0.057"/>
-            <TextBox x:Name="SenderAddress" Margin="195,66,168,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <TextBox x:Name="SenderAddress" Margin="195,66,168,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -37,7 +37,7 @@
 
 
             <Label Content="Reciever Address" Margin="41,129,684,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="20"/>
-            <TextBox x:Name="RecieverAddress" Margin="195,127,166,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <TextBox x:Name="RecieverAddress" Margin="195,127,166,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -59,7 +59,7 @@
 
 
             <Label Content="Package Weight (Kg)" Margin="35,354,674,0" VerticalAlignment="Top" Height="40" FontFamily="Agency FB" FontSize="20"/>
-            <TextBox x:Name="PackageWeight" Margin="193,352,450,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <TextBox x:Name="PackageWeight" Margin="193,352,450,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -71,7 +71,7 @@
                 <ComboBoxItem Content="Leading Post"></ComboBoxItem>
             </ComboBox>
             <Label Content="Phone(Not Required)" HorizontalAlignment="Left" Margin="442,354,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Agency FB"/>
-            <TextBox x:Name="PhoneNumber" Margin="597,352,46,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <TextBox x:Name="PhoneNumber" Margin="597,352,46,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>

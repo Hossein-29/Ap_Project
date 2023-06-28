@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,16 @@ namespace WpfPostCompany
             var SignUpWindow = new SignUpEmployeesWindow();
             SignUpWindow.Show();
             this.Close();
+        }
+
+        private void MouseEnterHandler(object sender, MouseEventArgs e)
+        {
+            SignUpBtn.Foreground  = new SolidColorBrush(Colors.SkyBlue);
+        }
+
+        private void MouseLeaveHandler(object sender, MouseEventArgs e)
+        {
+            SignUpBtn.Foreground = new SolidColorBrush(Colors.Black);
         }
     }
 }
