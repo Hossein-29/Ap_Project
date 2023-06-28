@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\DataAccess\\obj",
     "\\WpfPostCompany"
   ],
-  "SelectedNode": "\\WpfPostCompany\\LoginWindow.xaml",
+  "SelectedNode": "\\WpfPostCompany\\MainOrderRegistrationWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

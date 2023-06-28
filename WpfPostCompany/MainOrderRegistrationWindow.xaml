@@ -45,12 +45,12 @@
 
 
             <Label Content="Package Content Type" HorizontalAlignment="Left" Margin="35,221,0,0" VerticalAlignment="Top" Height="42" Width="170" Padding="7,9,5,5" FontFamily="Agency FB" FontSize="20"/>
-            <ComboBox Margin="233,213,459,274" RenderTransformOrigin="0.497,-0.151">
+            <ComboBox Margin="233,213,459,274" RenderTransformOrigin="0.497,-0.151" x:Name="PackageType">
                 <ComboBoxItem Content="Object"></ComboBoxItem>
                 <ComboBoxItem Content="Document"></ComboBoxItem>
                 <ComboBoxItem Content="Breakable"></ComboBoxItem>
             </ComboBox>
-            <CheckBox Margin="55,289,743,193">
+            <CheckBox Margin="55,289,743,193" x:Name="HasExpensiveContent">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="2.3" ScaleY="2.3" />
                 </CheckBox.LayoutTransform>
@@ -58,15 +58,15 @@
             <Label Content="Does The Package Contain Expensive Content?" HorizontalAlignment="Left" Margin="124,290,0,0" VerticalAlignment="Top" Width="456" FontFamily="Gadugi" FontSize="20" Foreground="#FFF20F08"/>
 
 
-            <Label Content="Package Weight" Margin="35,354,690,0" VerticalAlignment="Top" Height="40" FontFamily="Agency FB" FontSize="20"/>
-            <TextBox x:Name="PackageWeight" Margin="181,352,462,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <Label Content="Package Weight (Kg)" Margin="35,354,674,0" VerticalAlignment="Top" Height="40" FontFamily="Agency FB" FontSize="20"/>
+            <TextBox x:Name="PackageWeight" Margin="193,352,450,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
             </TextBox>
             <Label Content="Post Type" HorizontalAlignment="Left" Margin="442,221,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="20" Width="100"/>
 
-            <ComboBox Margin="589,213,103,271" Width="NaN">
+            <ComboBox Margin="589,213,103,271" Width="NaN" x:Name="PostType">
                 <ComboBoxItem Content="Ordinary Post"></ComboBoxItem>
                 <ComboBoxItem Content="Leading Post"></ComboBoxItem>
             </ComboBox>
@@ -76,7 +76,7 @@
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
             </TextBox>
-            <Button Content="Final Price" Margin="277,433,278,0" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow">
+            <Button Content="Final Price" Margin="277,433,278,0" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="CalculateFinalPrice">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>

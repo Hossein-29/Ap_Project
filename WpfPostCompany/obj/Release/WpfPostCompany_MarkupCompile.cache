@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Abolfazl\source\repos\ap_project\WpfPostCompany\obj\Release\
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Release\
 WpfPostCompany
 none
 false
 TRACE
-C:\Users\Abolfazl\source\repos\ap_project\WpfPostCompany\App.xaml
-1-817433027
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\App.xaml
+6-1988494970
 
-5-1046045311
-14-2024859826
-LoginWindow.xaml;
+10-1996312512
+141740246926
+EmployeePanel.xaml;LoginWindow.xaml;MainOrderRegistrationWindow.xaml;OrderRegistrationWindow.xaml;RegisterCostumerWindow.xaml;SignUpEmployeesWindow.xaml;
 
 True
 
