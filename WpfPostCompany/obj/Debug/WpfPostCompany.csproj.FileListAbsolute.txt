@@ -45,3 +45,7 @@ C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\MainOrderRegi
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\MainOrderRegistrationWindow.baml
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\ReportingOfOrdersWindow.g.cs
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\ReportingOfOrdersWindow.baml
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\DisplayPackageInformationWindow.g.cs
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\OrderInformation.g.cs
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\DisplayPackageInformationWindow.baml
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\OrderInformation.baml

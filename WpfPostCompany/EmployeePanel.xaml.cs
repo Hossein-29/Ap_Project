@@ -45,7 +45,9 @@ namespace WpfPostCompany
 
         private void DisplayPackageInfoBtn(object sender, RoutedEventArgs e)
         {
-
+            var DisplayInfo = new DisplayPackageInformationWindow();
+            DisplayInfo.Show();
+            this.Close();
         }
 
         private void ViewCostumerCommentsBtn(object sender, RoutedEventArgs e)

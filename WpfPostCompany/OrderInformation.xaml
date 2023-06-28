@@ -1,0 +1,115 @@
+﻿<Window x:Class="WpfPostCompany.OrderInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPostCompany"
+        mc:Ignorable="d"
+        Title="OrderInformation" Height="720" Width="1250" Topmost="True" Left="-10" Top="0" FlowDirection="LeftToRight">
+    <Grid HorizontalAlignment="Left" Width="1250">
+        <Label Content="Reporting Of Orders" Margin="386,-1,388,0" VerticalAlignment="Top" FontFamily="Forte" FontSize="50" Padding="21,5,5,5"/>
+        <Grid Margin="16,78,385,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF97A293"/>
+                    <GradientStop Color="#FF32878D" Offset="0.616"/>
+                    <GradientStop Color="#FF86D8BE"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="424"></ColumnDefinition>
+                    <ColumnDefinition Width="425"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Order Information" FontFamily="Curlz MT" FontSize="50" Foreground="Red"></Label>
+                <Label Grid.Column="1" Content="Order ID : " FontFamily="Curlz MT" FontSize="50" Foreground="#FFEFEFEF" Padding="95,5,5,5" x:Name="OrderID"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Label Content="Sender Adress : tehran tehran jannat abad pazohande p32 vahed 10" FontFamily="Californian FB" FontSize="30"></Label>
+
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Label Content="Sender Address : slalm hale shoma chetorite mesi vaghean" FontFamily="Californian FB" FontSize="30"></Label>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="283"></ColumnDefinition>
+                    <ColumnDefinition Width="360"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="2">
+                    <Label FontFamily="Californian FB" FontSize="30">Package Type : Breakable</Label>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label FontFamily="Californian FB" FontSize="30">Post Type : Ordinary</Label>
+                </Grid>
+                <Grid Grid.Column="0">
+                    <Label FontFamily="Californian FB" FontSize="30">Weight : 12.6</Label>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="425"></ColumnDefinition>
+                    <ColumnDefinition Width="424"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label FontFamily="Californian FB" FontSize="30">Has Expensive Content ? Yes</Label>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label FontFamily="Californian FB" FontSize="30">Phone : 09218138321</Label>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="425"></ColumnDefinition>
+                    <ColumnDefinition Width="424"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Price : 1256" FontFamily="Californian FB" FontSize="30"></Label>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label Content="Status" FontFamily="Californian FB" FontSize="30"></Label>
+                    <ComboBox Margin="138,7,140,49" x:Name="ShippingStatus" SelectionChanged="SelectionChangedHandler" FontSize="25">
+                        <ComboBoxItem Content="Registered"></ComboBoxItem>
+                        <ComboBoxItem Content="Ready To Send"></ComboBoxItem>
+                        <ComboBoxItem Content="Posted"></ComboBoxItem>
+                        <ComboBoxItem Content="Delivered"></ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+            </Grid>
+
+        </Grid>
+
+        <Button Content="Discard Changes" Margin="908,561,37,0" VerticalAlignment="Top" Height="89" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="40" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="DiscardChangesBtn">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-72.5" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF32878D" Offset="0.6"/>
+                    <GradientStop Color="#FF86D8BE" Offset="0.1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,11 +61,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DisplayPackageInformationWindow.xaml.cs">
+      <DependentUpon>DisplayPackageInformationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EmployeePanel.xaml.cs">
       <DependentUpon>EmployeePanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainOrderRegistrationWindow.xaml.cs">
       <DependentUpon>MainOrderRegistrationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderInformation.xaml.cs">
+      <DependentUpon>OrderInformation.xaml</DependentUpon>
     </Compile>
     <Compile Include="OrderRegistrationWindow.xaml.cs">
       <DependentUpon>OrderRegistrationWindow.xaml</DependentUpon>
@@ -108,6 +116,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DisplayPackageInformationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EmployeePanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -117,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainOrderRegistrationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderInformation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\App.xaml
-7-270513942
+9-1378281532
 
-11-789231148
-14-1283689122
-EmployeePanel.xaml;LoginWindow.xaml;MainOrderRegistrationWindow.xaml;OrderRegistrationWindow.xaml;RegisterCostumerWindow.xaml;ReportingOfOrdersWindow.xaml;SignUpEmployeesWindow.xaml;
+13-710426914
+16427837420
+DisplayPackageInformationWindow.xaml;EmployeePanel.xaml;LoginWindow.xaml;MainOrderRegistrationWindow.xaml;OrderInformation.xaml;OrderRegistrationWindow.xaml;RegisterCostumerWindow.xaml;ReportingOfOrdersWindow.xaml;SignUpEmployeesWindow.xaml;
 
 False
 
