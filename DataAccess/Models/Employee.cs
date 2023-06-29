@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace DataAccess.Models
         public string email { get; set; }
         public string userName { get; set ; }
         public string password { get; set; }
-        public static List<Employee> employees = new List<Employee>();
+        public static ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
 
         public Employee(string id, string firstName, string lastName, string email, string userName, string password)
         {

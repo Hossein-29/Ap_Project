@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace DataAccess.Models
         public string userName { get; set; }
         public string password { get; set; }
         public string phoneNumber { get; set; }
-        public static List<Customer> customers = new List<Customer>();
+        public static ObservableCollection<Customer> customers = new ObservableCollection<Customer>();
 
         public Customer(string id, string firstName, string lastName, string email, string userName, string password, string phoneNumber)
         {

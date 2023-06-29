@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataAccess.Models;
 
 namespace WpfPostCompany
 {
@@ -19,9 +20,10 @@ namespace WpfPostCompany
     /// </summary>
     public partial class ReportWindow : Window
     {
-        public ReportWindow()
+        public ReportWindow(Customer customer)
         {
             InitializeComponent();
+
         }
     }
 }
