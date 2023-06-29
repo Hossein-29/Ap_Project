@@ -14,3 +14,10 @@ C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostC
 C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CoreCompileInputs.cache
 C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.exe
 C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.pdb
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\bin\Debug\DataAccess.dll
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\bin\Debug\DataAccess.pdb
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\CustomerWindow.g.cs
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\ReportWindow.g.cs
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\CustomerWindow.baml
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\ReportWindow.baml
+C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CopyComplete

@@ -10,6 +10,7 @@ namespace DataAccess.Models
     public class Package : IPackage
     {
         public int id { get; set; }
+        public string senderId { get; set; }
         public string senderAddress { get; set; }
         public string recieverAddress { get; set; }
         public bool isExpensive { get; set; }

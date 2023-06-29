@@ -20,14 +20,20 @@ namespace WpfPostCompany
     /// </summary>
     public partial class CustomerWindow : Window
     {
-        public CustomerWindow(Customer customer)
+        public Customer curCustomer;
+        public CustomerWindow()
         {
             InitializeComponent();
+            Customer customer = new Customer("sldf", "hossein", "babazadeh", "hb3238816@gmail.com", "randomshit", "09385322639", "hossein29");
+            curCustomer = customer;
         }
 
         private void report_btn_Click(object sender, RoutedEventArgs e)
         {
-
+            ReportWindow reportWindow = new ReportWindow(curCustomer);
+            this.Hide();
+            reportWindow.ShowDialog();
+            this.ShowDialog();
         }
 
         private void package_info_btn_Click(object sender, RoutedEventArgs e)

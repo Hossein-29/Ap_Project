@@ -23,6 +23,7 @@ namespace WpfPostCompany
         public ReportWindow(Customer customer)
         {
             InitializeComponent();
+            report_dtgrid.DataContext = Package.packages.Where(p => p.senderId == customer.id);
 
         }
     }
