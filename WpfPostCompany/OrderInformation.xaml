@@ -10,12 +10,13 @@
         <Label Content="Reporting Of Orders" Margin="386,-1,388,0" VerticalAlignment="Top" FontFamily="Forte" FontSize="50" Padding="21,5,5,5"/>
         <Grid Margin="16,78,385,30">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -65,7 +66,7 @@
                     <Label FontFamily="Californian FB" FontSize="30">Has Expensive Content ? Yes</Label>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <Label FontFamily="Californian FB" FontSize="30">Phone : 09218138321</Label>
+                    <Label FontFamily="Californian FB" FontSize="30" Height="80" VerticalAlignment="Top">Phone : 09218138321</Label>
                 </Grid>
             </Grid>
 
@@ -75,11 +76,11 @@
                     <ColumnDefinition Width="424"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
-                    <Label Content="Price : 1256" FontFamily="Californian FB" FontSize="30"></Label>
+                    <Label Content="Price : 1256" FontFamily="Californian FB" FontSize="30"/>
                 </Grid>
                 <Grid Grid.Column="1">
                     <Label Content="Status" FontFamily="Californian FB" FontSize="30"></Label>
-                    <ComboBox Margin="138,7,140,49" x:Name="ShippingStatus" SelectionChanged="SelectionChangedHandler" FontSize="25">
+                    <ComboBox Margin="138,3,140,41" x:Name="ShippingStatus" SelectionChanged="SelectionChangedHandler" FontSize="25">
                         <ComboBoxItem Content="Registered"></ComboBoxItem>
                         <ComboBoxItem Content="Ready To Send"></ComboBoxItem>
                         <ComboBoxItem Content="Posted"></ComboBoxItem>
@@ -88,6 +89,9 @@
                 </Grid>
             </Grid>
 
+            <Grid Grid.Row="6">
+                <Label Content="Comment : i am so satisfied with package, thanks, good luck." FontFamily="Arial" FontSize="30" x:Name="ComentLbl"/>
+            </Grid>
         </Grid>
 
         <Button Content="Discard Changes" Margin="908,561,37,0" VerticalAlignment="Top" Height="89" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="40" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="DiscardChangesBtn">
