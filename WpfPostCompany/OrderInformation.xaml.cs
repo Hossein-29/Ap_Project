@@ -28,8 +28,6 @@ namespace WpfPostCompany
         {
             if (ShippingStatus.SelectedIndex == 3)
                 ShippingStatus.IsEnabled = false;
-            ComentLbl.FontSize = 30;
-            ComentLbl.Content += "i am so satified with quality, thanks, good luck";
         }
 
         private void DiscardChangesBtn(object sender, RoutedEventArgs e)

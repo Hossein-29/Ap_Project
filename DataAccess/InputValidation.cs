@@ -33,7 +33,7 @@ namespace DataAccess
         }
         public static bool EmployeePasswordValidation(string password)
         {
-            Regex regex = new Regex("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]){8,32}$");
+            Regex regex = new Regex("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,32}$");
             if (regex.IsMatch(password))
                 return true;
             return false;
@@ -51,6 +51,22 @@ namespace DataAccess
             if (regex.IsMatch(ssn))
                 return true;
             return false;
+        }
+        public static bool CreditCarNumberValidation(string creditCarNumber)
+        {
+            int Sum = 0;
+            for (int i = 1; i < creditCarNumber.Length + 1; i++)
+            {
+                int temp = int.Parse(creditCarNumber[i - 1].ToString());
+                if (i % 2 == 0)
+                {
+                    temp *= 2;
+                    if (temp > 9)
+                        temp -= 9;
+                }
+                Sum += temp;
+            }
+            return Sum % 10 == 0;
         }
     }
 }
