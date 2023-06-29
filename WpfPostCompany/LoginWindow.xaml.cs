@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Models;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -20,22 +21,26 @@ namespace WpfPostCompany
     /// </summary>
     public partial class LoginWindow : Window
     {
+        PostCompanyEntities _db = new PostCompanyEntities();
         public LoginWindow()
         {
             InitializeComponent();
-           
+
         }
 
         private void LoginBtn(object sender, RoutedEventArgs e)
         {
             if (UserNameInput.Text == "")
                 MessageBox.Show("Invalid UserName");
-            
+
             else if (PasswordInput.Text == "")
                 MessageBox.Show("Invalid Password");
-            var Panel = new EmployeePanel();
-            Panel.Show();
-            this.Close();
+            else
+            {
+                var Panel = new EmployeePanel();
+                Panel.Show();
+                this.Close();
+            }
         }
 
         private void SignUpEmployeesBtn(object sender, RoutedEventArgs e)
@@ -47,7 +52,7 @@ namespace WpfPostCompany
 
         private void MouseEnterHandler(object sender, MouseEventArgs e)
         {
-            SignUpBtn.Foreground  = new SolidColorBrush(Colors.SkyBlue);
+            SignUpBtn.Foreground = new SolidColorBrush(Colors.SkyBlue);
         }
 
         private void MouseLeaveHandler(object sender, MouseEventArgs e)

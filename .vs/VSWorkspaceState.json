@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\DataAccess",
+    "\\DataAccess\\Models",
     "\\DataAccess\\obj",
     "\\WpfPostCompany"
   ],
-  "SelectedNode": "\\WpfPostCompany\\MainOrderRegistrationWindow.xaml",
+  "SelectedNode": "\\PostCompany.sln",
   "PreviewInSolutionExplorer": false
 }

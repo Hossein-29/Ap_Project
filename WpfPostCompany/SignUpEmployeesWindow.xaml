@@ -25,7 +25,7 @@
         </Grid.Background>
 
         <Grid Grid.Row="1" Grid.Column="1" Background="White">
-            <Label Content="Sign Up" Margin="361,13,357,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="22" HorizontalContentAlignment="Center"/>
+            <Label Content="Sign Up" Margin="359,-1,359,0" VerticalAlignment="Top" FontFamily="Forte" FontSize="30" HorizontalContentAlignment="Center"/>
 
             <Label Content="First Name" Margin="14,76,711,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
             <TextBox x:Name="FirstName" HorizontalAlignment="Left" Margin="140,73,0,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
