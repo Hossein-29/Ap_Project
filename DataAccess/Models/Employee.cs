@@ -1,31 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace DataAccess.Models
 {
-    public class Employee : IPerson
-    {
-        public string id { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string email { get; set; }
-        public string userName { get; set ; }
-        public string password { get; set; }
-        public static ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
-        public Employee(string id, string firstName, string lastName, string email, string userName, string password)
-        {
-            this.id = id;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.email = email;
-            this.userName = userName;
-            this.password = password;
-            employees.Add(this);
-        }
+    [Table("Employee")]
+    public partial class Employee
+    {
+        [Key]
+        [Column(Order = 0)]
+        [StringLength(50)]
+        public string FirstName { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
+        [StringLength(50)]
+        public string LastName { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [StringLength(50)]
+        public string PersonalID { get; set; }
+
+        [Key]
+        [Column(Order = 3)]
+        [StringLength(50)]
+        public string UserName { get; set; }
+
+        [Key]
+        [Column(Order = 4)]
+        public string Email { get; set; }
+
+        [Key]
+        [Column(Order = 5)]
+        [StringLength(50)]
+        public string Password { get; set; }
     }
 }

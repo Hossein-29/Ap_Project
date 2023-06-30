@@ -1,33 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace DataAccess.Models
 {
-    public class Customer : IPerson
-    {
-        public string id { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string email { get; set; }
-        public string userName { get; set; }
-        public string password { get; set; }
-        public string phoneNumber { get; set; }
-        public static ObservableCollection<Customer> customers = new ObservableCollection<Customer>();
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
-        public Customer(string id, string firstName, string lastName, string email, string userName, string password, string phoneNumber)
-        {
-            this.id = id;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.email = email;
-            this.userName = userName;
-            this.password = password;
-            this.phoneNumber = phoneNumber;
-            customers.Add(this);
-        }
+    [Table("Customer")]
+    public partial class Customer
+    {
+        [Key]
+        [Column(Order = 0)]
+        [StringLength(50)]
+        public string FirstName { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
+        [StringLength(50)]
+        public string LastName { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [StringLength(50)]
+        public string SSN { get; set; }
+
+        [Key]
+        [Column(Order = 3)]
+        public string Email { get; set; }
+
+        [Key]
+        [Column(Order = 4)]
+        [StringLength(50)]
+        public string Phone { get; set; }
+
+        [Key]
+        [Column(Order = 5)]
+        [StringLength(50)]
+        public string UserName { get; set; }
+
+        [Key]
+        [Column(Order = 6)]
+        [StringLength(50)]
+        public string Password { get; set; }
+
+        [Key]
+        [Column(Order = 7)]
+        public double AccountBalance { get; set; }
     }
 }

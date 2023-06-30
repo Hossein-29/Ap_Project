@@ -24,8 +24,6 @@ namespace WpfPostCompany
         public CustomerWindow()
         {
             InitializeComponent();
-            Customer customer = new Customer("sldf", "hossein", "babazadeh", "hb3238816@gmail.com", "randomshit", "09385322639", "hossein29");
-            curCustomer = customer;
         }
 
         private void report_btn_Click(object sender, RoutedEventArgs e)
@@ -38,7 +36,20 @@ namespace WpfPostCompany
 
         private void package_info_btn_Click(object sender, RoutedEventArgs e)
         {
-
+            PostCompanyEntities db = new PostCompanyEntities();
+            var customer = new Customer()
+            {
+                FirstName = "hossein",
+                LastName = "baba",
+                SSN = "lsflksjf",
+                Email = "laslkfj",
+                Phone = "sfkljslf",
+                UserName = "ksl;fskljf",
+                Password ="sfkskdf",
+                AccountBalance = 0
+            };
+            db.Customers.Add(customer);
+            db.SaveChanges();
         }
 
         private void wallet_btn_Click(object sender, RoutedEventArgs e)
