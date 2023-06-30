@@ -54,47 +54,12 @@
     <Compile Include="Models\Costumer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\PostCompanyEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PostCompanyEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PostCompanyEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PostCompanyEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PostCompanyEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PostCompanyEntities.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\PostCompanyEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\PostCompanyEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PostCompanyEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="Models\PostCompanyEntities.edmx.diagram">
-      <DependentUpon>PostCompanyEntities.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Models\PostCompanyEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PostCompanyEntities.Context.cs</LastGenOutput>
-      <DependentUpon>PostCompanyEntities.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\PostCompanyEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PostCompanyEntities.edmx</DependentUpon>
-      <LastGenOutput>PostCompanyEntities.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
