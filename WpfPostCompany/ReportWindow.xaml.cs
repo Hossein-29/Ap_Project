@@ -24,7 +24,9 @@ namespace WpfPostCompany
         public ReportWindow(Customer customer)
         {
             InitializeComponent();
-
+            this.customer = customer;
+            PostCompanyEntities dbContext = new PostCompanyEntities();
+            report_dtgrid.ItemsSource = dbContext.Orders.Where(o => o.CustomerSSN == customer.SSN).ToList();
         }
     }
 }
