@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace WpfPostCompany
     /// </summary>
     public partial class EmployeePanel : Window
     {
-        public EmployeePanel()
+        Employee Employee { get; set; }
+        public EmployeePanel(Employee employee)
         {
             InitializeComponent();
+            Employee = employee;
         }
 
         private void OrderRegistrationBtn(object sender, RoutedEventArgs e)
@@ -38,8 +41,8 @@ namespace WpfPostCompany
 
         private void RegisterCostumerBtn(object sender, RoutedEventArgs e)
         {
-            var RegisterCostumer = new RegisterCostumerWindow();
-            RegisterCostumer.Show();
+            var Window = new RegisterCostumerWindow(Employee);
+            Window.Show();
             this.Close();
         }
 

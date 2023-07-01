@@ -1,9 +1,12 @@
-﻿using DataAccess.Models;
+﻿using DataAccess;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,7 +30,7 @@ namespace WpfPostCompany
             InitializeComponent();
 
         }
-        public string UserStatus(string name, string password)
+        public dynamic UserStatus(string name, string password)
         {
             var Customer = (from customer in _db.Customers
                             where customer.UserName == name && customer.Password == password
@@ -38,32 +41,42 @@ namespace WpfPostCompany
                                 where employee.UserName == name && employee.Password == password
                                 select employee).FirstOrDefault();
                 if (Employee == null)
-                    return "none";
+                    return null;
                 else
-                    return "employee";
+                    return Employee;
             }
             else
-                return "customer";
+                return Customer;
         }
+
+
         public void Login()
         {
-            if (UserNameInput.Text == "")
+            string UserName = UserNameInput.Text.ToString();
+            string Password = PasswordInput.Text.ToString();
+            dynamic Temp = UserStatus(UserName, Password);
+            if (UserName == "")
                 throw new Exception("please enter userName");
 
-            else if (PasswordInput.Text == "")
+            else if (Password == "")
                 throw new Exception("please enter password");
 
-            if (UserStatus(UserNameInput.Text, PasswordInput.Text) == "none")
+            else if (Temp == null)
             {
                 UserNameInput.Text = "";
                 PasswordInput.Text = "";
                 throw new Exception("user not found");
             }
-            else
+            else if (Temp is Employee)
             {
-                var Window = new EmployeePanel();
-                //    Window.Show();
-                //     this.Close();
+                var Window = new EmployeePanel(Temp);
+                MessageBox.Show("welcome to employee panel");
+                Window.Show();
+                Thread.Sleep(1000);
+                this.Close();
+            }
+            else if (UserStatus(UserNameInput.Text.ToString(), PasswordInput.Text.ToString()) is Customer)
+            {
 
             }
         }

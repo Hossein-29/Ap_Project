@@ -1,8 +1,12 @@
 ﻿using DataAccess;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,42 +24,66 @@ namespace WpfPostCompany
     /// </summary>
     public partial class RegisterCostumerWindow : Window
     {
-        public RegisterCostumerWindow()
+        PostCompanyEntities _db = new PostCompanyEntities();
+        Customer _customer = new Customer();
+        Employee Employee;
+        public RegisterCostumerWindow(Employee employee)
         {
             InitializeComponent();
+            this.DataContext = _customer;
+            Employee = employee;
         }
-
-        private void SignUpCostumerBtn(object sender, RoutedEventArgs e)
+        private void SignUpCustomer()
         {
             if (FirstName.Text == "")
-                MessageBox.Show("please enter first name");
+                throw new Exception("please enter firstName");
             else if (LastName.Text == "")
-                MessageBox.Show("please enter last name");
+                throw new Exception("please enter lastName");
             else if (SSN.Text == "")
-                MessageBox.Show("please enter SSN");
+                throw new Exception("please enter SSN");
             else if (PhoneNumber.Text == "")
-                MessageBox.Show("please enter phone number");
+                throw new Exception("please enter phone");
             else if (Email.Text == "")
-                MessageBox.Show("please enter email");
-            else
-            {
-                if (!InputValidation.NameValidation(FirstName.Text.ToString()))
-                    MessageBox.Show("invalid firstName");
-                else if (!InputValidation.NameValidation(LastName.Text.ToString()))
-                    MessageBox.Show("invalid lastName");
-                else if (!InputValidation.SSN_Validation(SSN.Text.ToString()))
-                    MessageBox.Show("invalid SSN");
-                else if (!InputValidation.PhoneValidation(PhoneNumber.Text.ToString()))
-                    MessageBox.Show("invalid phone number");
-                else if (!InputValidation.EmailValidation(Email.Text.ToString()))
-                    MessageBox.Show("invalid email format");
+                throw new Exception("please enter email");
+            else if (!InputValidation.NameValidation(FirstName.Text.ToString()))
+                throw new Exception("invalid firstName");
+            else if (!InputValidation.NameValidation(LastName.Text.ToString()))
+                throw new Exception("invalid lastName");
+            else if (!InputValidation.SSN_Validation(SSN.Text.ToString()))
+                throw new Exception("invalid SSN");
+            else if (!InputValidation.PhoneValidation(PhoneNumber.Text.ToString()))
+                throw new Exception("invalid phone number");
+            else if (!InputValidation.EmailValidation(Email.Text.ToString()))
+                throw new Exception("invalid email format");
 
-                else
-                {
-                    var EmployeePanel = new EmployeePanel();
-                    EmployeePanel.Show();
-                    this.Close();
-                }
+            _db.Customers.Add(_customer);
+            _customer.UserName = DataCreater.CreateCustomerUserName();
+            _customer.Password = DataCreater.CreateCustomerPassword();
+            try
+            {
+
+                _db.SaveChanges();
+            }
+            catch (DbEntityValidationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            var Window = new EmployeePanel(Employee);
+            MessageBox.Show("customer registered successfully");
+            Thread.Sleep(1000);
+            Window.Show();
+            this.Close();
+        }
+        private void SignUpCostumerBtn(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                SignUpCustomer();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
         }
