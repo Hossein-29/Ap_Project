@@ -42,6 +42,11 @@ namespace DataAccess.Models
                 .Property(e => e.Password)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Customer>()
+                .HasMany(e => e.Orders)
+                .WithRequired(e => e.Customer)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Employee>()
                 .Property(e => e.FirstName)
                 .IsUnicode(false);

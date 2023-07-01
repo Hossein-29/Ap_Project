@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,24 @@ namespace WpfPostCompany
         public LoginWindow()
         {
             InitializeComponent();
+
+            
+            Customer customer = new Customer
+            {
+                FirstName = "hossein",
+                LastName = "Babazadeh",
+                SSN = "4890563261",
+                Email = "hb3238816@gmail.com",
+                Phone = "09385322639",
+                UserName = "hossein29",
+                Password = "1234",
+                AccountBalance = 0
+            };
+            this.Hide();
+            CustomerWindow customerWindow = new CustomerWindow(customer);
+            customerWindow.ShowDialog();
+            this.ShowDialog();
         }
+
     }
 }

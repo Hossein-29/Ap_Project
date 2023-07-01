@@ -20,15 +20,21 @@ namespace WpfPostCompany
     /// </summary>
     public partial class CustomerWindow : Window
     {
-        public Customer curCustomer;
-        public CustomerWindow()
+        public Customer customer;
+        public CustomerWindow(Customer customer)
         {
             InitializeComponent();
-        }
+            this.customer = customer;
+            customer_info_lbl.Content = customer.UserName + "\n" +
+                                        customer.FirstName + " " + customer.LastName + "\n" +
+                                        customer.Phone + "\n" +
+                                        customer.SSN + "\n" +
+                                        customer.Email + "\n";
+        } 
 
         private void report_btn_Click(object sender, RoutedEventArgs e)
         {
-            ReportWindow reportWindow = new ReportWindow(curCustomer);
+            ReportWindow reportWindow = new ReportWindow(customer);
             this.Hide();
             reportWindow.ShowDialog();
             this.ShowDialog();
@@ -36,20 +42,7 @@ namespace WpfPostCompany
 
         private void package_info_btn_Click(object sender, RoutedEventArgs e)
         {
-            PostCompanyEntities db = new PostCompanyEntities();
-            var customer = new Customer()
-            {
-                FirstName = "hossein",
-                LastName = "baba",
-                SSN = "lsflksjf",
-                Email = "laslkfj",
-                Phone = "sfkljslf",
-                UserName = "ksl;fskljf",
-                Password ="sfkskdf",
-                AccountBalance = 0
-            };
-            db.Customers.Add(customer);
-            db.SaveChanges();
+          
         }
 
         private void wallet_btn_Click(object sender, RoutedEventArgs e)

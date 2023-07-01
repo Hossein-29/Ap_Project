@@ -20,6 +20,7 @@ namespace WpfPostCompany
     /// </summary>
     public partial class ReportWindow : Window
     {
+        public Customer customer;
         public ReportWindow(Customer customer)
         {
             InitializeComponent();

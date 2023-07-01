@@ -23,12 +23,7 @@
 
         <Border Grid.Column="1" Background="Yellow">
             <StackPanel>
-                <Label HorizontalAlignment="Left" Margin="100, 10" FontSize="30">username</Label>
-                <Label HorizontalAlignment="Left" Margin="100, 10" FontSize="30">First name + Last name</Label>
-                <Label HorizontalAlignment="Left" Margin="100, 10" FontSize="30">Email</Label>
-                <Label HorizontalAlignment="Left" Margin="100, 10" FontSize="30">id</Label>
-                <Label HorizontalAlignment="Left" Margin="100, 10" FontSize="30">phone number</Label>
-                <Label HorizontalAlignment="Left" Margin="100, 10" FontSize="30">wallet credit</Label>
+                <Label Name="customer_info_lbl" FontSize="50" Margin="20">jgdkjfksllf</Label>
             </StackPanel>
         </Border>
     </Grid>

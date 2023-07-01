@@ -9,42 +9,42 @@ namespace DataAccess.Models
     [Table("Customer")]
     public partial class Customer
     {
-        [Key]
-        [Column(Order = 0)]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Customer()
+        {
+            Orders = new HashSet<Order>();
+        }
+
+        [Required]
         [StringLength(50)]
         public string FirstName { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
+        [Required]
         [StringLength(50)]
         public string LastName { get; set; }
 
         [Key]
-        [Column(Order = 2)]
         [StringLength(50)]
         public string SSN { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
+        [Required]
         public string Email { get; set; }
 
-        [Key]
-        [Column(Order = 4)]
+        [Required]
         [StringLength(50)]
         public string Phone { get; set; }
 
-        [Key]
-        [Column(Order = 5)]
+        [Required]
         [StringLength(50)]
         public string UserName { get; set; }
 
-        [Key]
-        [Column(Order = 6)]
+        [Required]
         [StringLength(50)]
         public string Password { get; set; }
 
-        [Key]
-        [Column(Order = 7)]
         public double AccountBalance { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

@@ -9,32 +9,26 @@ namespace DataAccess.Models
     [Table("Employee")]
     public partial class Employee
     {
-        [Key]
-        [Column(Order = 0)]
+        [Required]
         [StringLength(50)]
         public string FirstName { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
+        [Required]
         [StringLength(50)]
         public string LastName { get; set; }
 
         [Key]
-        [Column(Order = 2)]
         [StringLength(50)]
         public string PersonalID { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
+        [Required]
         [StringLength(50)]
         public string UserName { get; set; }
 
-        [Key]
-        [Column(Order = 4)]
+        [Required]
         public string Email { get; set; }
 
-        [Key]
-        [Column(Order = 5)]
+        [Required]
         [StringLength(50)]
         public string Password { get; set; }
     }
