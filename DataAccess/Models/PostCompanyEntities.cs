@@ -12,33 +12,33 @@ namespace DataAccess.Models
         {
         }
 
-        public virtual DbSet<Costumer> Costumer { get; set; }
-        public virtual DbSet<Employee> Employee { get; set; }
-        public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Costumer>()
+            modelBuilder.Entity<Customer>()
                 .Property(e => e.FirstName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Costumer>()
+            modelBuilder.Entity<Customer>()
                 .Property(e => e.LastName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Costumer>()
+            modelBuilder.Entity<Customer>()
                 .Property(e => e.SSN)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Costumer>()
+            modelBuilder.Entity<Customer>()
                 .Property(e => e.Phone)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Costumer>()
+            modelBuilder.Entity<Customer>()
                 .Property(e => e.UserName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Costumer>()
+            modelBuilder.Entity<Customer>()
                 .Property(e => e.Password)
                 .IsUnicode(false);
 
@@ -67,7 +67,7 @@ namespace DataAccess.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Order>()
-                .Property(e => e.CostumerSSN)
+                .Property(e => e.CustomerSSN)
                 .IsUnicode(false);
         }
     }

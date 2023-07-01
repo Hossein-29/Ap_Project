@@ -1,6 +1,9 @@
 ﻿using DataAccess;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -21,54 +24,68 @@ namespace WpfPostCompany
     /// </summary>
     public partial class SignUpEmployeesWindow : Window
     {
+        PostCompanyEntities _db = new PostCompanyEntities();
+        private Employee _employee = new Employee();
         public SignUpEmployeesWindow()
         {
             InitializeComponent();
+            this.DataContext = _employee;
         }
 
+        public void SignUpEmployee()
+        {
+
+            if (FirstName.Text == "")
+                throw new Exception("please enter firstName");
+            else if (LastName.Text == "")
+                throw new Exception("please enter lastName");
+            else if (PersonalID.Text == "")
+                throw new Exception("please enter personalID");
+            else if (UserName.Text == "")
+                throw new Exception("please enter userName");
+            else if (Email.Text == "")
+                throw new Exception("please enter email");
+            else if (Password.Text == "")
+                throw new Exception("please enter password");
+            else if (RePassword.Text == "")
+                throw new Exception("please enter repeat password");
+
+
+            if (!InputValidation.NameValidation(FirstName.Text.ToString()))
+                throw new Exception("invalid firstName");
+            else if (!InputValidation.NameValidation(LastName.Text.ToString()))
+                throw new Exception("invalid lastName");
+            else if (!InputValidation.PersonalIDValidation(PersonalID.Text.ToString()))
+                throw new Exception("invalid personal ID");
+            else if (!InputValidation.EmailValidation(Email.Text.ToString()))
+                throw new Exception("invalid  email");
+            else if (!InputValidation.EmployeePasswordValidation(Password.Text.ToString()))
+                throw new Exception("invalid  password");
+
+            else if (Password.Text.ToString() != RePassword.Text.ToString())
+            {
+                RePassword.Text = "";
+                throw new Exception("password and repeated passowrd are not equal");
+            }
+
+            _db.Employees.Add(_employee);
+            _db.SaveChanges();
+
+            LoginWindow Window = new LoginWindow();
+            MessageBox.Show("employee registered successfully");
+            Thread.Sleep(1000);
+            Window.Show();
+            this.Close();
+        }
         private void SignUpBtn(object sender, RoutedEventArgs e)
         {
-            if (FirstName.Text == "")
-                MessageBox.Show("please enter first name");
-            else if (LastName.Text == "")
-                MessageBox.Show("please enter last name");
-            else if (PersonID.Text == "")
-                MessageBox.Show("please enter personID");
-            else if (UserName.Text == "")
-                MessageBox.Show("please enter userName");
-            else if (Email.Text == "")
-                MessageBox.Show("please enter email");
-            else if (Password.Text == "")
-                MessageBox.Show("please enter password");
-            else if (RePassword.Text == "")
-                MessageBox.Show("please enter password repeat");
-            else
+            try
             {
-                if (!InputValidation.NameValidation(FirstName.Text.ToString()))
-                    MessageBox.Show("invalid firstName");
-                else if (!InputValidation.NameValidation(LastName.Text.ToString()))
-                    MessageBox.Show("invalid lastName");
-                else if (!InputValidation.PersonIDValidation(PersonID.Text.ToString()))
-                    MessageBox.Show("invalid personID");
-                else if (!InputValidation.EmailValidation(Email.Text.ToString()))
-                    MessageBox.Show("invalid email");
-                else if (!InputValidation.EmployeePasswordValidation(Password.Text.ToString()))
-                    MessageBox.Show("invalid password");
-                else if (Password.Text.ToString() != RePassword.Text.ToString())
-                {
-                    MessageBox.Show("password and repeated password are not aqual");
-                    RePassword.Text = "";
-                }
-
-                else
-                {
-                    MessageBox.Show("Sign Up Successfully");
-                    LoginWindow loginWindow = new LoginWindow();
-                    Thread.Sleep(2000);
-                
-                    loginWindow.Show();
-                    this.Close();
-                }
+                SignUpEmployee();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

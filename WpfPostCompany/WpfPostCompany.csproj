@@ -74,6 +74,7 @@
     <Compile Include="EmployeePanel.xaml.cs">
       <DependentUpon>EmployeePanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EntityValidationException.cs" />
     <Compile Include="MainOrderRegistrationWindow.xaml.cs">
       <DependentUpon>MainOrderRegistrationWindow.xaml</DependentUpon>
     </Compile>

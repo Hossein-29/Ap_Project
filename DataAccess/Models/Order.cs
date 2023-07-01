@@ -26,7 +26,7 @@ namespace DataAccess.Models
 
         [Required]
         [StringLength(50)]
-        public string CostumerSSN { get; set; }
+        public string CustomerSSN { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int OrderID { get; set; }

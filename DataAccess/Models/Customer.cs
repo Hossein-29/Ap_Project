@@ -6,8 +6,8 @@ namespace DataAccess.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Costumer")]
-    public partial class Costumer
+    [Table("Customer")]
+    public partial class Customer
     {
         [Required]
         [StringLength(50)]
@@ -17,10 +17,9 @@ namespace DataAccess.Models
         [StringLength(50)]
         public string LastName { get; set; }
 
-        [Required]
+        [Key]
         [StringLength(50)]
         public string SSN { get; set; }
-
         [Required]
         public string Email { get; set; }
 
@@ -28,7 +27,7 @@ namespace DataAccess.Models
         [StringLength(50)]
         public string Phone { get; set; }
 
-        [Key]
+        [Required]
         [StringLength(50)]
         public string UserName { get; set; }
 

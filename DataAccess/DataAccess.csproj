@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InputValidation.cs" />
-    <Compile Include="Models\Costumer.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\PostCompanyEntities.cs" />

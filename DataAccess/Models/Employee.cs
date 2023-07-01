@@ -5,6 +5,7 @@ namespace DataAccess.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Net.Http.Headers;
 
     [Table("Employee")]
     public partial class Employee
@@ -17,11 +18,11 @@ namespace DataAccess.Models
         [StringLength(50)]
         public string LastName { get; set; }
 
-        [Required]
+        [Key]
         [StringLength(50)]
         public string PersonalID { get; set; }
 
-        [Key]
+        [Required]
         [StringLength(50)]
         public string UserName { get; set; }
 

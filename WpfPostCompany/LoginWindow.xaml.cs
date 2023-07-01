@@ -27,26 +27,61 @@ namespace WpfPostCompany
             InitializeComponent();
 
         }
-
-        private void LoginBtn(object sender, RoutedEventArgs e)
+        public string UserStatus(string name, string password)
+        {
+            var Customer = (from customer in _db.Customers
+                            where customer.UserName == name && customer.Password == password
+                            select customer).FirstOrDefault();
+            if (Customer == null)
+            {
+                var Employee = (from employee in _db.Employees
+                                where employee.UserName == name && employee.Password == password
+                                select employee).FirstOrDefault();
+                if (Employee == null)
+                    return "none";
+                else
+                    return "employee";
+            }
+            else
+                return "customer";
+        }
+        public void Login()
         {
             if (UserNameInput.Text == "")
-                MessageBox.Show("Invalid UserName");
+                throw new Exception("please enter userName");
 
             else if (PasswordInput.Text == "")
-                MessageBox.Show("Invalid Password");
+                throw new Exception("please enter password");
+
+            if (UserStatus(UserNameInput.Text, PasswordInput.Text) == "none")
+            {
+                UserNameInput.Text = "";
+                PasswordInput.Text = "";
+                throw new Exception("user not found");
+            }
             else
             {
-                var Panel = new EmployeePanel();
-                Panel.Show();
-                this.Close();
+                var Window = new EmployeePanel();
+                //    Window.Show();
+                //     this.Close();
+
             }
         }
-
+        private void LoginBtn(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Login();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void SignUpEmployeesBtn(object sender, RoutedEventArgs e)
         {
-            var SignUpWindow = new SignUpEmployeesWindow();
-            SignUpWindow.Show();
+            var Window = new SignUpEmployeesWindow();
+            Window.Show();
             this.Close();
         }
 
