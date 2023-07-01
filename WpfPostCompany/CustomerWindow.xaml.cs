@@ -42,7 +42,10 @@ namespace WpfPostCompany
 
         private void package_info_btn_Click(object sender, RoutedEventArgs e)
         {
-          
+            PackageInfoWindow packageInfoWindow = new PackageInfoWindow(customer);
+            this.Hide();
+            packageInfoWindow.ShowDialog();
+            this.ShowDialog();
         }
 
         private void wallet_btn_Click(object sender, RoutedEventArgs e)
