@@ -41,7 +41,7 @@ namespace WpfPostCompany
 
         private void SendDeliveryEmail(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void RegisterCostumerBtn(object sender, RoutedEventArgs e)
@@ -67,6 +67,13 @@ namespace WpfPostCompany
         {
             var ReportingOrders = new ReportingOfOrdersWindow(Employee);
             ReportingOrders.Show();
+            this.Close();
+        }
+
+        private void BackToLoginPanel(object sender, RoutedEventArgs e)
+        {
+            var Window = new LoginWindow();
+            Window.Show();
             this.Close();
         }
     }

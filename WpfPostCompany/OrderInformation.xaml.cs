@@ -42,6 +42,11 @@ namespace WpfPostCompany
         public void DisplayOrderInfo()
         {
             Order Order = ReturnOrder(Id);
+            ShippingStatus.SelectedIndex = Order.ShippingStatus;
+
+            if (ShippingStatus.SelectedIndex == 3)
+                ShippingStatus.IsEnabled = false;
+
             OrderID.Content += Id.ToString();
             SenderAddress.Content += Order.SenderAddress;
             ReceiverAddress.Content += Order.ReceiverAddress;
@@ -57,7 +62,6 @@ namespace WpfPostCompany
         {
             Order Order = ReturnOrder(Id);
             Order.ShippingStatus = ShippingStatus.SelectedIndex;
-            
             _db.SaveChanges();
             var Window = new EmployeePanel(Employee);
             Window.Show();
@@ -67,8 +71,6 @@ namespace WpfPostCompany
         {
             try
             {
-                if (ShippingStatus.SelectedIndex == 3)
-                    ShippingStatus.IsEnabled = false;
                 SaveChanges();
             }
             catch (Exception ex)

@@ -44,7 +44,10 @@ namespace WpfPostCompany
             if (OrderIDText.Text == "")
                 throw new Exception("please enter orderID");
             else if (!SearchOrderByID(Id))
+            {
+                OrderIDText.Text = "";
                 throw new Exception("order not found");
+            }
 
             var Window = new OrderInformation(Employee, Id);
             Window.Show();

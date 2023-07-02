@@ -143,6 +143,12 @@
             </Button.Background>
         </Button>
         <Label x:Name="EmployeeUserName" Content="User Name : " FontSize="40" Foreground="White" HorizontalAlignment="Left" Margin="24,14,0,0" VerticalAlignment="Top" Height="68" Width="347" FontFamily="Agency FB" Padding="5,7,5,5"/>
-
+        <Button Content="Back" Margin="42,605,963,0" VerticalAlignment="Top" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="#FFF6F6F6" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="#FF837E7E" Click="BackToLoginPanel">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>

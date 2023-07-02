@@ -88,5 +88,12 @@ namespace WpfPostCompany
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void BackToLogin(object sender, RoutedEventArgs e)
+        {
+            var Window = new LoginWindow();
+            Window.Show();
+            this.Close();
+        }
     }
 }

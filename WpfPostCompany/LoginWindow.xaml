@@ -35,7 +35,7 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="1" Grid.Column="1" Background="#FFFAFAFA" RenderTransformOrigin="0.434,0.459">
-            <Label Content="Login" FontSize="50" Margin="128,24,129,0" VerticalAlignment="Top" Height="70" Padding="25,0,8,0" FontFamily="Arial Black"/>
+            <Label Content="Login" FontSize="50" Margin="117,21,117,0" VerticalAlignment="Top" Height="70" Padding="35,0,8,0" FontFamily="Arial Black"/>
             <Label Content="UserName" Margin="42,118,308,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
             <TextBox x:Name="UserNameInput" HorizontalAlignment="Left" Margin="68,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" FontSize="28" Padding="0,-3,0,0">
                 <TextBox.Effect>

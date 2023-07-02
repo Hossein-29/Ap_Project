@@ -80,7 +80,7 @@
                 </Grid>
                 <Grid Grid.Column="1">
                     <Label Content="Status" x:Name="Status" FontFamily="Californian FB" FontSize="30"></Label>
-                    <ComboBox SelectedIndex="0" Margin="131,1,53,13" x:Name="ShippingStatus" FontSize="25" Padding="40,10,5,3">
+                    <ComboBox Margin="131,1,53,13" x:Name="ShippingStatus" FontSize="25" Padding="40,10,5,3">
                         <ComboBoxItem Content="Registered"></ComboBoxItem>
                         <ComboBoxItem Content="Ready To Send"></ComboBoxItem>
                         <ComboBoxItem Content="Posted"></ComboBoxItem>
@@ -115,6 +115,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Content="User Name : " x:Name="EmployeeUserName" HorizontalAlignment="Left" Margin="13,9,0,0" VerticalAlignment="Top" Height="66" Width="366" FontFamily="Agency FB" FontSize="30" Padding="5,8,5,5"/>
+        <Label Content="User Name : " x:Name="EmployeeUserName" HorizontalAlignment="Left" Margin="13,9,0,0" VerticalAlignment="Top" Height="66" Width="366" FontFamily="Agency FB" FontSize="30" Padding="5,8,5,5" Foreground="#FF010101"/>
     </Grid>
 </Window>

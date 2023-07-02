@@ -6,6 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,10 +14,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace WpfPostCompany
 {
@@ -79,32 +83,41 @@ namespace WpfPostCompany
             else if (PhoneNumber.Text != "" && !InputValidation.PhoneValidation(PhoneNumber.Text.ToString()))
                 throw new Exception("invalid phone number");
 
-            _order.OrderID = _db.Orders.Count() + 1;
-            _order.CustomerSSN = SSN;
-            _order.PackageType = PackageType.SelectedIndex;
-            _order.PostType = PostType.SelectedIndex;
 
-            if (HasExpensiveContent.IsChecked == false)
-                _order.HasExpensiveContent = 0;
-            else
-                _order.HasExpensiveContent = 1;
 
-               _order.FinalPrice = int.Parse(FinalPrice().ToString());
-            try
+            var result = MessageBox.Show($"final price : {FinalPrice()}\n press order to register order ?", "",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == System.Windows.Forms.DialogResult.OK)
             {
+                _order.OrderID = _db.Orders.Count() + 1;
+                _order.CustomerSSN = SSN;
+                _order.PackageType = PackageType.SelectedIndex;
+                _order.PostType = PostType.SelectedIndex;
+
+                if (HasExpensiveContent.IsChecked == false)
+                    _order.HasExpensiveContent = 0;
+                else
+                    _order.HasExpensiveContent = 1;
+
+                _order.FinalPrice = int.Parse(FinalPrice().ToString());
+
                 _db.Orders.Add(_order);
                 _db.SaveChanges();
+                MessageBox.Show("order registerd successfully");
+                var Window = new EmployeePanel(Employee);
+                Thread.Sleep(500);
+                Window.Show();
+                this.Close();
             }
-            catch (DbUpdateException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                var Window = new EmployeePanel(Employee);
+                Window.Show();
+                this.Close();
             }
 
-            var Window = new EmployeePanel(Employee);
-            MessageBox.Show("order registered successfully");
-            Thread.Sleep(500);
-            Window.Show();
-            this.Close();
         }
         private void CalculateFinalPriceBtn(object sender, RoutedEventArgs e)
         {
