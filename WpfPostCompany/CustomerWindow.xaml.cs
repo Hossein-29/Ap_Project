@@ -50,7 +50,10 @@ namespace WpfPostCompany
 
         private void wallet_btn_Click(object sender, RoutedEventArgs e)
         {
-
+            WalletWindow walletWindow = new WalletWindow(customer);
+            this.Hide();
+            walletWindow.ShowDialog();
+            this.ShowDialog();
         }
 
         private void profile_btn_Click(object sender, RoutedEventArgs e)

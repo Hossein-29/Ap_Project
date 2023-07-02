@@ -51,3 +51,5 @@ C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CopyComplete
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WalletWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WalletWindow.baml
