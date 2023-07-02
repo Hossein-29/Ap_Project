@@ -63,5 +63,12 @@ namespace WpfPostCompany
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void BackToEmployeePanel(object sender, RoutedEventArgs e)
+        {
+            var Window = new EmployeePanel(Employee);
+            Window.Show();
+            this.Close();
+        }
     }
 }

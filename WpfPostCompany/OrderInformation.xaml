@@ -34,12 +34,12 @@
                 <Label Grid.Column="1" Content="Order ID : " FontFamily="Curlz MT" FontSize="50" Foreground="#FFEFEFEF" Padding="95,5,5,5" x:Name="OrderID"/>
             </Grid>
             <Grid Grid.Row="1">
-                <Label Content="Sender Adress : tehran tehran jannat abad pazohande p32 vahed 10" FontFamily="Californian FB" FontSize="30"></Label>
+                <Label Content="Sender Adress : " Name="SenderAddress" FontFamily="Californian FB" FontSize="30"></Label>
 
             </Grid>
 
             <Grid Grid.Row="2">
-                <Label Content="Sender Address : slalm hale shoma chetorite mesi vaghean" FontFamily="Californian FB" FontSize="30"></Label>
+                <Label Content="Reciever Address : " Name="ReceiverAddress" FontFamily="Californian FB" FontSize="30"></Label>
             </Grid>
             <Grid Grid.Row="3">
                 <Grid.ColumnDefinitions>
@@ -48,13 +48,13 @@
                     <ColumnDefinition Width="360"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="2">
-                    <Label FontFamily="Californian FB" FontSize="30">Package Type : Breakable</Label>
+                    <Label FontFamily="Californian FB" FontSize="30" Content="Package Type : " Name="PackageType"></Label>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <Label FontFamily="Californian FB" FontSize="30">Post Type : Ordinary</Label>
+                    <Label FontFamily="Californian FB" FontSize="30" Name="PostType" Content="PostType : "></Label>
                 </Grid>
                 <Grid Grid.Column="0">
-                    <Label FontFamily="Californian FB" FontSize="30">Weight : 12.6</Label>
+                    <Label FontFamily="Californian FB" FontSize="30" Content="Weight : " Name="Weight"></Label>
                 </Grid>
             </Grid>
             <Grid Grid.Row="4">
@@ -63,10 +63,10 @@
                     <ColumnDefinition Width="424"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
-                    <Label FontFamily="Californian FB" FontSize="30">Has Expensive Content ? Yes</Label>
+                    <Label FontFamily="Californian FB" FontSize="30" Content="Has Expensive Content : " x:Name="HasExpensiveContent"></Label>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <Label FontFamily="Californian FB" FontSize="30" Height="80" VerticalAlignment="Top">Phone : 09218138321</Label>
+                    <Label FontFamily="Californian FB" FontSize="30" Height="80" VerticalAlignment="Top" x:Name ="Phone" Content="Phone : "></Label>
                 </Grid>
             </Grid>
 
@@ -76,11 +76,11 @@
                     <ColumnDefinition Width="424"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
-                    <Label Content="Price : 1256" FontFamily="Californian FB" FontSize="30"/>
+                    <Label Content="Price : " x:Name="Price" FontFamily="Californian FB" FontSize="30"/>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <Label Content="Status" FontFamily="Californian FB" FontSize="30"></Label>
-                    <ComboBox Margin="138,3,140,41" x:Name="ShippingStatus" SelectionChanged="SelectionChangedHandler" FontSize="25">
+                    <Label Content="Status" x:Name="Status" FontFamily="Californian FB" FontSize="30"></Label>
+                    <ComboBox SelectedIndex="0" Margin="131,1,53,13" x:Name="ShippingStatus" FontSize="25" Padding="40,10,5,3">
                         <ComboBoxItem Content="Registered"></ComboBoxItem>
                         <ComboBoxItem Content="Ready To Send"></ComboBoxItem>
                         <ComboBoxItem Content="Posted"></ComboBoxItem>
@@ -90,11 +90,11 @@
             </Grid>
 
             <Grid Grid.Row="6">
-                <Label Content="Comment : i am so satisfied with package, thanks, good luck." FontFamily="Arial" FontSize="30" x:Name="ComentLbl"/>
+                <Label Content="Comment : " x:Name="Comment" FontFamily="Arial" FontSize="30"/>
             </Grid>
         </Grid>
 
-        <Button Content="Discard Changes" Margin="908,561,37,0" VerticalAlignment="Top" Height="89" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="40" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="DiscardChangesBtn">
+        <Button Content="Save Changes" Margin="908,561,37,0" VerticalAlignment="Top" Height="89" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="40" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="SaveChangesBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -115,5 +115,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Label Content="User Name : " x:Name="EmployeeUserName" HorizontalAlignment="Left" Margin="13,9,0,0" VerticalAlignment="Top" Height="66" Width="366" FontFamily="Agency FB" FontSize="30" Padding="5,8,5,5"/>
     </Grid>
 </Window>

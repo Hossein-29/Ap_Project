@@ -79,10 +79,17 @@ namespace WpfPostCompany
             else if (PhoneNumber.Text != "" && !InputValidation.PhoneValidation(PhoneNumber.Text.ToString()))
                 throw new Exception("invalid phone number");
 
-            _order.OrderID = _db.Orders.Count();
+            _order.OrderID = _db.Orders.Count() + 1;
             _order.CustomerSSN = SSN;
             _order.PackageType = PackageType.SelectedIndex;
             _order.PostType = PostType.SelectedIndex;
+
+            if (HasExpensiveContent.IsChecked == false)
+                _order.HasExpensiveContent = 0;
+            else
+                _order.HasExpensiveContent = 1;
+
+               _order.FinalPrice = int.Parse(FinalPrice().ToString());
             try
             {
                 _db.Orders.Add(_order);
@@ -92,7 +99,7 @@ namespace WpfPostCompany
             {
                 MessageBox.Show(ex.Message);
             }
-         
+
             var Window = new EmployeePanel(Employee);
             MessageBox.Show("order registered successfully");
             Thread.Sleep(500);
@@ -109,7 +116,6 @@ namespace WpfPostCompany
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
     }
 }

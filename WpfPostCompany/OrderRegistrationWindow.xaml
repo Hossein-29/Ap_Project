@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
-        Title="OrderRegistrationWindow" Height="720" Width="1250" Topmost="True" Top="0" Left="-10"> 
+        Title="OrderRegistrationWindow" Height="720" Width="1250" Topmost="True" Top="0" Left="-10">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -22,6 +22,13 @@
             </TextBox.Effect>
         </TextBox>
         <Button Content="Search SSN" Margin="271,362,271,0" VerticalAlignment="Top" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Width="400" Background="Black" Click="SearchSSnBtn">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Back" Margin="42,605,963,0" VerticalAlignment="Top" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="White" Click="BackToEmployeePanel">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>

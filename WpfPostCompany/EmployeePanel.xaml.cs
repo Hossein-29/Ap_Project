@@ -53,7 +53,7 @@ namespace WpfPostCompany
 
         private void DisplayPackageInfoBtn(object sender, RoutedEventArgs e)
         {
-            var DisplayInfo = new DisplayPackageInformationWindow();
+            var DisplayInfo = new DisplayPackageInformationWindow(Employee);
             DisplayInfo.Show();
             this.Close();
         }

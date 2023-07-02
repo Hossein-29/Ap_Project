@@ -72,5 +72,43 @@ namespace DataAccess
                             select customer).FirstOrDefault();
             return Customer;
         }
+        static public string PostType(int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    return "Ordinary";
+                case 1:
+                    return "Leading";
+                default:
+                    return "";
+            }
+        }
+        static public string PackageType(int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    return "Object";
+                case 1:
+                    return "Document";
+                case 2:
+                    return "Breakable";
+                default:
+                    return "";
+            }
+        }
+        static public string HasExpensiveContent(int state)
+        {
+            switch (state)
+            {
+                case 0:
+                    return "No";
+                case 1:
+                    return "Yes";
+                default:
+                    return "";
+            }
+        }
     }
 }

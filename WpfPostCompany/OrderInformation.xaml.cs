@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccess;
+using DataAccess.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,21 +21,60 @@ namespace WpfPostCompany
     /// </summary>
     public partial class OrderInformation : Window
     {
-        public OrderInformation()
+        PostCompanyEntities _db = new PostCompanyEntities();
+        int Id { get; set; }
+        Employee Employee { get; set; }
+        public OrderInformation(Employee employee, int id)
         {
             InitializeComponent();
+            Employee = employee;
+            Id = id;
+            EmployeeUserName.Content += Employee.UserName;
+            DisplayOrderInfo();
         }
-
-        private void SelectionChangedHandler(object sender, SelectionChangedEventArgs e)
+        public Order ReturnOrder(int id)
         {
-            if (ShippingStatus.SelectedIndex == 3)
-                ShippingStatus.IsEnabled = false;
+            var Order = (from order in _db.Orders
+                         where order.OrderID == id
+                         select order).FirstOrDefault();
+            return Order;
         }
-
-        private void DiscardChangesBtn(object sender, RoutedEventArgs e)
+        public void DisplayOrderInfo()
         {
-            if (ShippingStatus.SelectedItem == null)
-                MessageBox.Show("please select status");
+            Order Order = ReturnOrder(Id);
+            OrderID.Content += Id.ToString();
+            SenderAddress.Content += Order.SenderAddress;
+            ReceiverAddress.Content += Order.ReceiverAddress;
+            Weight.Content += Order.Weight.ToString();
+            PackageType.Content += DataCreater.PackageType(Order.PackageType);
+            PostType.Content += DataCreater.PostType(Order.PostType);
+            HasExpensiveContent.Content += DataCreater.HasExpensiveContent(Order.HasExpensiveContent);
+            Phone.Content += Order.Phone;
+            Price.Content += Order.FinalPrice.ToString();
+            Comment.Content += Order.Comment;
+        }
+        public void SaveChanges()
+        {
+            Order Order = ReturnOrder(Id);
+            Order.ShippingStatus = ShippingStatus.SelectedIndex;
+            
+            _db.SaveChanges();
+            var Window = new EmployeePanel(Employee);
+            Window.Show();
+            this.Close();
+        }
+        private void SaveChangesBtn(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (ShippingStatus.SelectedIndex == 3)
+                    ShippingStatus.IsEnabled = false;
+                SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -72,7 +72,6 @@ namespace WpfPostCompany
                 var Window = new EmployeePanel(Temp);
                 MessageBox.Show("welcome to employee panel");
                 Window.Show();
-                Thread.Sleep(100);
                 this.Close();
             }
             else if (UserStatus(UserNameInput.Text.ToString(), PasswordInput.Text.ToString()) is Customer)
