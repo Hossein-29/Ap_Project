@@ -32,6 +32,7 @@ namespace WpfPostCompany
             InitializeComponent();
             this.DataContext = _customer;
             Employee = employee;
+            EmployeeUserName.Content += Employee.UserName;
         }
         private void SignUpCustomer()
         {
@@ -59,16 +60,7 @@ namespace WpfPostCompany
             _db.Customers.Add(_customer);
             _customer.UserName = DataCreater.CreateCustomerUserName();
             _customer.Password = DataCreater.CreateCustomerPassword();
-            try
-            {
-
-                _db.SaveChanges();
-            }
-            catch (DbEntityValidationException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
+            _db.SaveChanges();
             var Window = new EmployeePanel(Employee);
             MessageBox.Show("customer registered successfully");
             Thread.Sleep(1000);

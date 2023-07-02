@@ -1,6 +1,7 @@
 ﻿using DataAccess.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,16 +21,20 @@ namespace WpfPostCompany
     /// </summary>
     public partial class EmployeePanel : Window
     {
+        PostCompanyEntities _db = new PostCompanyEntities();
         Employee Employee { get; set; }
         public EmployeePanel(Employee employee)
         {
             InitializeComponent();
             Employee = employee;
+            EmployeeUserName.Content += Employee.UserName;
         }
+
+ 
 
         private void OrderRegistrationBtn(object sender, RoutedEventArgs e)
         {
-            var OrderRegistration = new OrderRegistrationWindow();
+            var OrderRegistration = new OrderRegistrationWindow(Employee);
             OrderRegistration.Show();
             this.Close();
         }
@@ -60,7 +65,7 @@ namespace WpfPostCompany
 
         private void ReportingOfOrdersBtn(object sender, RoutedEventArgs e)
         {
-            var ReportingOrders = new ReportingOfOrdersWindow();
+            var ReportingOrders = new ReportingOfOrdersWindow(Employee);
             ReportingOrders.Show();
             this.Close();
         }

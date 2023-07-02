@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ReportingOfOrdersWindow" Height="720" Width="1250" FlowDirection="LeftToRight" Topmost="True" Left="-10" Top="0">
     <Grid Background="White">
-
+        <Label Content="User Name : " x:Name="EmployeeUserName" FontSize="40" Foreground="Black" RenderTransformOrigin="0.868,0.871" Margin="18,4,867,616" FontFamily="Agency FB" Padding="7,10,5,5"/>
         <Label Content="Reporting Of Orders" Margin="386,7,388,0" VerticalAlignment="Top" FontFamily="Forte" FontSize="50" Padding="21,5,5,5"/>
 
         <Grid Margin="17,94,493,40">

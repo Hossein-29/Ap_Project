@@ -142,6 +142,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Label x:Name="EmployeeUserName" Content="User Name : " FontSize="40" Foreground="White" HorizontalAlignment="Left" Margin="24,14,0,0" VerticalAlignment="Top" Height="68" Width="347" FontFamily="Agency FB" Padding="5,7,5,5"/>
 
     </Grid>
 </Window>

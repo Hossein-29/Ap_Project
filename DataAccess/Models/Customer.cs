@@ -20,6 +20,7 @@ namespace DataAccess.Models
         [Key]
         [StringLength(50)]
         public string SSN { get; set; }
+
         [Required]
         public string Email { get; set; }
 

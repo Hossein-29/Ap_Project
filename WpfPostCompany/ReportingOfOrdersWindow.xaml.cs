@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace WpfPostCompany
     /// </summary>
     public partial class ReportingOfOrdersWindow : Window
     {
-        public ReportingOfOrdersWindow()
+        Employee Employee { get; set; }
+        public ReportingOfOrdersWindow(Employee employee)
         {
             InitializeComponent();
+            Employee = employee;
+            EmployeeUserName.Content += Employee.UserName;
         }
     }
 }

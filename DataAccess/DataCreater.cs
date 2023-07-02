@@ -58,19 +58,19 @@ namespace DataAccess
             } while (!IsPasswordExist(Password));
             return Password;
         }
-        //static public Employee ReturnEmployee(string username)
-        //{
-        //    var Employee = (from emp in _db.Employees
-        //                    where emp.UserName == username
-        //                    select emp).First();
-        //    return Employee;
-        //}
-        //static public Customer ReturnCustomer(string username)
-        //{
-        //    var Customer = (from customer in _db.Customers
-        //                    where customer.UserName == username
-        //                    select customer).First();
-        //    return Customer;
-        //}
+        static public Employee ReturnEmployee(string username)
+        {
+            var Employee = (from emp in _db.Employees
+                            where emp.UserName == username
+                            select emp).FirstOrDefault();
+            return Employee;
+        }
+        static public Customer ReturnCustomer(string username)
+        {
+            var Customer = (from customer in _db.Customers
+                            where customer.UserName == username
+                            select customer).FirstOrDefault();
+            return Customer;
+        }
     }
 }

@@ -23,6 +23,7 @@
                 <GradientStop Color="#FFB15649" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <Label Grid.Row="0" Grid.Column="0" Content="User Name : " FontFamily="Agency FB" FontSize="40" Padding="17,24,5,5" x:Name="EmployeeUserName" HorizontalAlignment="Left" Width="335" Grid.ColumnSpan="2"></Label>
         <Label Grid.Row="0" Grid.Column="1" FontSize="54" FontFamily="Forte" Padding="228,5,5,5">Employee Panel</Label>
         <Grid Grid.Row="1" Grid.Column="1" Background="White">
             <Label Content="Register Costumer" Margin="279,5,280,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="22" HorizontalContentAlignment="Center"/>
