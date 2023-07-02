@@ -23,12 +23,13 @@
                 <GradientStop Color="#FFB15649" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <Label Grid.Row="0" Grid.Column="0" Content="User Name : " Foreground="Black" FontFamily="Agency FB" FontSize="40" Padding="17,24,5,5" x:Name="EmployeeUserName" HorizontalAlignment="Left" Width="335" Grid.ColumnSpan="2"></Label>
         <Label Grid.Row="0" Grid.Column="1" FontSize="54" FontFamily="Forte" Padding="228,5,5,5">Employee Panel</Label>
         <Grid Grid.Row="1" Grid.Column="1" Background="White">
             <Label Content="Register Costumer" Margin="279,5,280,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="22" HorizontalContentAlignment="Center"/>
 
             <Label Content="First Name" Margin="14,76,711,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox x:Name="FirstName" HorizontalAlignment="Left" Margin="140,73,0,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <TextBox Text="{Binding FirstName}" x:Name="FirstName" HorizontalAlignment="Left" Margin="140,73,0,0" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -36,14 +37,14 @@
 
 
             <Label Content="Last Name" Margin="432,76,310,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox x:Name="LastName" Margin="560,72,40,0" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83">
+            <TextBox Text="{Binding LastName}" x:Name="LastName" Margin="560,72,40,0" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
             </TextBox>
 
             <Label Content="SSN" Margin="14,158,669,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox x:Name="SSN" HorizontalAlignment="Left" Margin="140,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
+            <TextBox Text="{Binding SSN}" x:Name="SSN" HorizontalAlignment="Left" Margin="140,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="25">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -53,7 +54,7 @@
 
 
             <Label Content="Email" Margin="14,236,724,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox x:Name="Email" HorizontalAlignment="Left" Margin="140,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
+            <TextBox x:Name="Email" HorizontalAlignment="Left" Margin="140,231,0,0" TextWrapping="Wrap" Text="{Binding Email}" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="25">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -61,7 +62,7 @@
 
 
             <Label Content="Phone Number" Margin="430,158,319,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
-            <TextBox x:Name="PhoneNumber" Margin="560,152,40,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="20">
+            <TextBox Text="{Binding Phone}" x:Name="PhoneNumber" Margin="560,152,40,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" RenderTransformOrigin="0.757,0.83" FontSize="25">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -90,5 +91,12 @@
                 </Button.Background>
             </Button>
         </Grid>
+        <Button Content="Back" Margin="59,0,737,0" VerticalAlignment="Center" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="White" Click="BackToEmployeePanel" Grid.ColumnSpan="2" Grid.Row="2">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>

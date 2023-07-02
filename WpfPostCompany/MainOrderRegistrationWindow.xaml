@@ -24,12 +24,12 @@
                 <GradientStop Color="#FF86D8BE"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Grid.Row="0" Content="Employee Panel" VerticalAlignment="Top" FontSize="50" FontFamily="Forte" Padding="16,2,8,5" Foreground="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="2" Margin="199,20,1,0"/>
+        <Label Content="Employee Panel" VerticalAlignment="Center" FontSize="50" FontFamily="Forte" Padding="16,2,8,5" Foreground="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="714" Grid.Column="1" Margin="0,0,68,0"/>
         <Grid Grid.Row="1" Grid.Column="1" Background="White">
-            <Label Content="Order Registration" Margin="279,5,280,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="22" HorizontalContentAlignment="Center" Foreground="#FF29D2E3"/>
+            <Label Content="Order Registration" Margin="279,9,280,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="22" HorizontalContentAlignment="Center" Foreground="Black"/>
 
             <Label Content="Sender Address" Margin="41,59,684,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="20" RenderTransformOrigin="0.536,0.057"/>
-            <TextBox x:Name="SenderAddress" Margin="195,66,168,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <TextBox x:Name="SenderAddress" Text="{Binding SenderAddress}" Margin="196,66,49,0" TextWrapping="Wrap" FontSize="28" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" Padding="0,-06,0,0">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -37,7 +37,7 @@
 
 
             <Label Content="Reciever Address" Margin="41,129,684,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="20"/>
-            <TextBox x:Name="RecieverAddress" Margin="195,127,166,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <TextBox x:Name="RecieverAddress" Text="{Binding ReceiverAddress}" Margin="195,127,48,0" TextWrapping="Wrap" FontSize="28" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" Padding="0,-6,0,0" Width="605">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -45,7 +45,7 @@
 
 
             <Label Content="Package Content Type" HorizontalAlignment="Left" Margin="35,221,0,0" VerticalAlignment="Top" Height="42" Width="170" Padding="7,9,5,5" FontFamily="Agency FB" FontSize="20"/>
-            <ComboBox Margin="233,213,459,274" RenderTransformOrigin="0.497,-0.151" x:Name="PackageType">
+            <ComboBox  Margin="233,213,459,274" RenderTransformOrigin="0.497,-0.151" x:Name="PackageType" FontSize="15">
                 <ComboBoxItem Content="Object"></ComboBoxItem>
                 <ComboBoxItem Content="Document"></ComboBoxItem>
                 <ComboBoxItem Content="Breakable"></ComboBoxItem>
@@ -59,24 +59,24 @@
 
 
             <Label Content="Package Weight (Kg)" Margin="35,354,674,0" VerticalAlignment="Top" Height="40" FontFamily="Agency FB" FontSize="20"/>
-            <TextBox x:Name="PackageWeight" Margin="193,352,450,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <TextBox x:Name="PackageWeight" Text="{Binding Weight}" Margin="193,352,450,0" TextWrapping="Wrap" FontSize="28" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" Padding="0,-6,0,0">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
             </TextBox>
             <Label Content="Post Type" HorizontalAlignment="Left" Margin="442,221,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="20" Width="100"/>
 
-            <ComboBox Margin="589,213,103,271" Width="NaN" x:Name="PostType">
+            <ComboBox Margin="589,213,103,271" Width="NaN" x:Name="PostType" FontSize="15">
                 <ComboBoxItem Content="Ordinary Post"></ComboBoxItem>
                 <ComboBoxItem Content="Leading Post"></ComboBoxItem>
             </ComboBox>
             <Label Content="Phone(Not Required)" HorizontalAlignment="Left" Margin="442,354,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Agency FB"/>
-            <TextBox x:Name="PhoneNumber" Margin="597,352,46,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
+            <TextBox x:Name="PhoneNumber" Text="{Binding Phone}" Margin="597,352,46,0" TextWrapping="Wrap" FontSize="28" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" Padding="0,-6,0,0">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
             </TextBox>
-            <Button Content="Final Price" Margin="277,433,278,0" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="CalculateFinalPrice">
+            <Button Content="Final Price" Margin="277,433,278,0" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="CalculateFinalPriceBtn">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -98,5 +98,6 @@
                 </Button.Background>
             </Button>
         </Grid>
+        <Label Name="EmployeeUserName" Content="User Name : " FontSize="40" Margin="20,15,667,0" VerticalAlignment="Top" Height="64" Grid.ColumnSpan="2" FontFamily="Agency FB" Foreground="Black"/>
     </Grid>
 </Window>

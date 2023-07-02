@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,15 +20,55 @@ namespace WpfPostCompany
     /// </summary>
     public partial class DisplayPackageInformationWindow : Window
     {
-        public DisplayPackageInformationWindow()
+        PostCompanyEntities _db = new PostCompanyEntities();
+        int Id { get; set; }
+        Employee Employee { get; set; }
+        public DisplayPackageInformationWindow(Employee employee)
         {
             InitializeComponent();
+            Employee = employee;
+            EmployeeUserName.Content += Employee.UserName;
         }
+        public bool SearchOrderByID(int id)
+        {
+            var Order = (from order in _db.Orders
+                         where order.OrderID == id
+                         select order).FirstOrDefault();
+            if (Order == null)
+                return false;
+            return true;
+        }
+        public void DisplayOrderInfo()
+        {
+            Id = int.Parse(OrderIDText.Text);
+            if (OrderIDText.Text == "")
+                throw new Exception("please enter orderID");
+            else if (!SearchOrderByID(Id))
+            {
+                OrderIDText.Text = "";
+                throw new Exception("order not found");
+            }
 
+            var Window = new OrderInformation(Employee, Id);
+            Window.Show();
+            this.Close();
+        }
         private void DisplayOrderInfoBtn(object sender, RoutedEventArgs e)
         {
-            var OrderInfo = new OrderInformation();
-            OrderInfo.Show();
+            try
+            {
+                DisplayOrderInfo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BackToEmployeePanel(object sender, RoutedEventArgs e)
+        {
+            var Window = new EmployeePanel(Employee);
+            Window.Show();
             this.Close();
         }
     }

@@ -15,14 +15,22 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Label Content="Empolyee Panel" Margin="425,7,426,623" FontFamily="Forte" FontSize="50" Padding="19,5,5,5"/>
-        <TextBox Margin="264,162,317,472" x:Name="OrderID" FontSize="40">
+        <Label Content="Empolyee Panel" Margin="425,15,426,588" FontFamily="Forte" FontSize="50" Padding="19,5,5,5"/>
+        <TextBox Margin="264,200,317,434" x:Name="OrderIDText" FontSize="42">
             <TextBox.Effect>
                 <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
             </TextBox.Effect>
         </TextBox>
-        <Label Content="Order ID" Margin="61,89,962,496" FontFamily="Bahnschrift SemiLight Condensed" FontSize="48" Padding="31,21,5,5"/>
-        <Button Content="Display Order Information" Margin="437,362,438,0" VerticalAlignment="Top" Height="84" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="35" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="Black" Click="DisplayOrderInfoBtn">
+        <Label Content="Order ID" Margin="61,123,962,462" FontFamily="Bahnschrift SemiLight Condensed" FontSize="48" Padding="31,21,5,5"/>
+        <Button Content="Display Order Information" Margin="437,380,438,0" VerticalAlignment="Top" Height="84" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="35" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="Black" Click="DisplayOrderInfoBtn">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label Content="User Name : " x:Name="EmployeeUserName" FontFamily="Agency FB" FontSize="45" HorizontalAlignment="Left" Margin="21,16,0,0" VerticalAlignment="Top" Width="400" Height="81" Padding="7,5,5,5"/>
+        <Button Content="Back" Margin="42,605,963,0" VerticalAlignment="Top" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="White" Click="BackToEmployeePanel">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>

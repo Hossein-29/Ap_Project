@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DataAccess;
+using DataAccess.Models;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,21 +22,53 @@ namespace WpfPostCompany
     /// </summary>
     public partial class OrderRegistrationWindow : Window
     {
-        public OrderRegistrationWindow()
+        PostCompanyEntities _db = new PostCompanyEntities();
+        Employee Employee { get; set; }
+        public OrderRegistrationWindow(Employee employee)
         {
             InitializeComponent();
+            Employee = employee;
         }
 
+        public bool SeachCustomerBySSN(string ssn)
+        {
+            var Customer = _db.Customers.Where(customer => customer.SSN == ssn).FirstOrDefault();
+            if (Customer == null)
+                return false;
+            return true;
+        }
+        public void SearchCustomer()
+        {
+            string CustomerSSN = SSN.Text.ToString();
+            if (CustomerSSN == "")
+                throw new Exception("please enter SSN");
+            else if (!SeachCustomerBySSN(CustomerSSN))
+            {
+                SSN.Text = "";
+                throw new Exception("customer not found");
+            }
+
+            var Window = new MainOrderRegistrationWindow(Employee, CustomerSSN);
+            Window.Show();
+            this.Close();
+        }
         private void SearchSSnBtn(object sender, RoutedEventArgs e)
         {
-            if (SSN.Text == "")
-                MessageBox.Show("please enter SSN");
-            else
+            try
             {
-               var MainOrderRergistration = new MainOrderRegistrationWindow();
-                MainOrderRergistration.Show();
-                this.Close();
+                SearchCustomer();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BackToEmployeePanel(object sender, RoutedEventArgs e)
+        {
+            var Window = new EmployeePanel(Employee);
+            Window.Show();
+            this.Close();
         }
     }
 }

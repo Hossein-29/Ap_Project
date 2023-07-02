@@ -1,17 +1,26 @@
 ﻿using DataAccess;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity.Validation;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace WpfPostCompany
 {
@@ -20,9 +29,17 @@ namespace WpfPostCompany
     /// </summary>
     public partial class MainOrderRegistrationWindow : Window
     {
-        public MainOrderRegistrationWindow()
+        PostCompanyEntities _db = new PostCompanyEntities();
+        Order _order = new Order();
+        Employee Employee { get; set; }
+        string SSN { get; set; }
+        public MainOrderRegistrationWindow(Employee employee, string ssn)
         {
             InitializeComponent();
+            Employee = employee;
+            SSN = ssn;
+            this.DataContext = _order;
+            EmployeeUserName.Content += Employee.UserName;
         }
         private double FinalPrice()
         {
@@ -44,31 +61,73 @@ namespace WpfPostCompany
                 Weight -= 0.5;
                 int Coefficient = 0;
                 Coefficient += (int)Math.Ceiling(Weight / 0.5);
-                if(Coefficient != 0)
-                Price *= Coefficient * 1.2;
+                if (Coefficient != 0)
+                    Price *= Coefficient * 1.2;
             }
             return Price;
         }
-
-        private void CalculateFinalPrice(object sender, RoutedEventArgs e)
+        private void CalculateFinalPrice()
         {
             if (SenderAddress.Text == "")
-                MessageBox.Show("please enter sender address");
+                throw new Exception("please enter sender address");
             else if (RecieverAddress.Text == "")
-                MessageBox.Show("please enter reciever address");
+                throw new Exception("please enter receiver address");
             else if (PackageType.SelectedItem == null)
-                MessageBox.Show("please select type of package");
+                throw new Exception("please select package type");
             else if (PostType.SelectedItem == null)
-                MessageBox.Show("please select type of post");
+                throw new Exception("please enter post type");
             else if (PackageWeight.Text == "")
-                MessageBox.Show("please enter weight");
+                throw new Exception("please enter weight");
             else if (double.IsNaN(double.Parse(PackageWeight.Text.ToString())))
-                MessageBox.Show("invalid weight value");
+                throw new Exception("invalid weight");
             else if (PhoneNumber.Text != "" && !InputValidation.PhoneValidation(PhoneNumber.Text.ToString()))
-                MessageBox.Show("invalid phone number");
+                throw new Exception("invalid phone number");
+
+
+
+            var result = MessageBox.Show($"final price : {FinalPrice()}\n press order to register order ?", "",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                _order.OrderID = _db.Orders.Count() + 1;
+                _order.CustomerSSN = SSN;
+                _order.PackageType = PackageType.SelectedIndex;
+                _order.PostType = PostType.SelectedIndex;
+
+                if (HasExpensiveContent.IsChecked == false)
+                    _order.HasExpensiveContent = 0;
+                else
+                    _order.HasExpensiveContent = 1;
+
+                _order.FinalPrice = int.Parse(FinalPrice().ToString());
+
+                _db.Orders.Add(_order);
+                _db.SaveChanges();
+                MessageBox.Show("order registerd successfully");
+                var Window = new EmployeePanel(Employee);
+                Thread.Sleep(500);
+                Window.Show();
+                this.Close();
+            }
             else
             {
-                MessageBox.Show($"Final Price : {FinalPrice()}", "", MessageBoxButton.OKCancel);
+                var Window = new EmployeePanel(Employee);
+                Window.Show();
+                this.Close();
+            }
+
+        }
+        private void CalculateFinalPriceBtn(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CalculateFinalPrice();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

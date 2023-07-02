@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DataAccess.Models;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,33 +21,39 @@ namespace WpfPostCompany
     /// </summary>
     public partial class EmployeePanel : Window
     {
-        public EmployeePanel()
+        PostCompanyEntities _db = new PostCompanyEntities();
+        Employee Employee { get; set; }
+        public EmployeePanel(Employee employee)
         {
             InitializeComponent();
+            Employee = employee;
+            EmployeeUserName.Content += Employee.UserName;
         }
+
+ 
 
         private void OrderRegistrationBtn(object sender, RoutedEventArgs e)
         {
-            var OrderRegistration = new OrderRegistrationWindow();
+            var OrderRegistration = new OrderRegistrationWindow(Employee);
             OrderRegistration.Show();
             this.Close();
         }
 
         private void SendDeliveryEmail(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void RegisterCostumerBtn(object sender, RoutedEventArgs e)
         {
-            var RegisterCostumer = new RegisterCostumerWindow();
-            RegisterCostumer.Show();
+            var Window = new RegisterCostumerWindow(Employee);
+            Window.Show();
             this.Close();
         }
 
         private void DisplayPackageInfoBtn(object sender, RoutedEventArgs e)
         {
-            var DisplayInfo = new DisplayPackageInformationWindow();
+            var DisplayInfo = new DisplayPackageInformationWindow(Employee);
             DisplayInfo.Show();
             this.Close();
         }
@@ -57,8 +65,15 @@ namespace WpfPostCompany
 
         private void ReportingOfOrdersBtn(object sender, RoutedEventArgs e)
         {
-            var ReportingOrders = new ReportingOfOrdersWindow();
+            var ReportingOrders = new ReportingOfOrdersWindow(Employee);
             ReportingOrders.Show();
+            this.Close();
+        }
+
+        private void BackToLoginPanel(object sender, RoutedEventArgs e)
+        {
+            var Window = new LoginWindow();
+            Window.Show();
             this.Close();
         }
     }

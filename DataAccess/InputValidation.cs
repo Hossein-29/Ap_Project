@@ -38,10 +38,10 @@ namespace DataAccess
                 return true;
             return false;
         }
-        public static bool PersonIDValidation(string personID)
+        public static bool PersonalIDValidation(string personalID)
         {
             Regex regex = new Regex("^[0-9]{2}9[0-9]{2}$");
-            if (regex.IsMatch(personID))
+            if (regex.IsMatch(personalID))
                 return true;
             return false;
         }
