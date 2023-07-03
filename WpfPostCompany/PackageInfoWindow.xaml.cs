@@ -38,8 +38,8 @@ namespace WpfPostCompany
             {
                 order_panel.Visibility = Visibility.Visible;
                 Order order = orders[0];
-                order_info_label.Content = order.SenderAaddress + "\n" +
-                                            order.SenderAaddress + "\n" +
+                order_info_label.Content = order.SenderAddress + "\n" +
+                                            order.ReceiverAddress + "\n" +
                                             order.Weight + "\n" +
                                             order.CustomerSSN;
                 if(order.ShippingStatus == 1)

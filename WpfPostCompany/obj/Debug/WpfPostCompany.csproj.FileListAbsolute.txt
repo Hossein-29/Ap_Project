@@ -1,100 +1,50 @@
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\bin\Debug\WpfPostCompany.exe.config
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\bin\Debug\WpfPostCompany.exe
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\bin\Debug\WpfPostCompany.pdb
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.AssemblyReference.cache
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.SuggestedBindingRedirects.cache
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\LoginWindow.g.cs
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\App.g.cs
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.cache
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.lref
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\LoginWindow.baml
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.g.resources
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.Properties.Resources.resources
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.GenerateResource.cache
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CoreCompileInputs.cache
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.exe
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.pdb
-<<<<<<< HEAD
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\WpfPostCompany.exe.config
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\WpfPostCompany.exe
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\WpfPostCompany.pdb
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\DataAccess.dll
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\DataAccess.pdb
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.AssemblyReference.cache
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.SuggestedBindingRedirects.cache
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\LoginWindow.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\App.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.cache
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.lref
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\LoginWindow.baml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.g.resources
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.Properties.Resources.resources
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.GenerateResource.cache
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CoreCompileInputs.cache
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CopyComplete
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.exe
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.pdb
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\SignUpEmployeesWindow.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\SignUpEmployeesWindow.baml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\EmployeePanel.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\EmployeePanel.baml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\RegisterCostumerWindow.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\RegisterCostumerWindow.baml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\OrderRegistrationWindow.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\OrderRegistrationWindow.baml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\MainOrderRegistrationWindow.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\MainOrderRegistrationWindow.baml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\ReportingOfOrdersWindow.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\ReportingOfOrdersWindow.baml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\DisplayPackageInformationWindow.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\OrderInformation.g.cs
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\DisplayPackageInformationWindow.baml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\obj\Debug\OrderInformation.baml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.dll
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\DataAccess.dll.config
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.xml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\WPFCustomMessageBox.dll
-C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\WPFCustomMessageBox.xml
-=======
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\bin\Debug\DataAccess.dll
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\bin\Debug\DataAccess.pdb
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\CustomerWindow.g.cs
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\ReportWindow.g.cs
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\CustomerWindow.baml
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\ReportWindow.baml
-C:\Users\Hossein Babazadeh\Desktop\PostCompany\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CopyComplete
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.AssemblyReference.cache
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.SuggestedBindingRedirects.cache
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\CustomerWindow.g.cs
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\LoginWindow.g.cs
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\PackageInfoWindow.g.cs
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\ReportWindow.g.cs
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\App.g.cs
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.cache
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.lref
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.exe
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.pdb
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\WpfPostCompany.exe.config
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\WpfPostCompany.exe
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\WpfPostCompany.pdb
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\DataAccess.dll
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.dll
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\WPFCustomMessageBox.dll
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\DataAccess.pdb
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\DataAccess.dll.config
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.xml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\WPFCustomMessageBox.xml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.AssemblyReference.cache
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.SuggestedBindingRedirects.cache
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\DisplayPackageInformationWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\EmployeePanel.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\CustomerWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\LoginWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\MainOrderRegistrationWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\OrderInformation.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\OrderRegistrationWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\RegisterCostumerWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\ReportingOfOrdersWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\SignUpEmployeesWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\PackageInfoWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\ReportWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WalletWindow.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\App.g.cs
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.cache
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany_MarkupCompile.lref
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\DisplayPackageInformationWindow.baml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\EmployeePanel.baml
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\CustomerWindow.baml
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\LoginWindow.baml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\MainOrderRegistrationWindow.baml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\OrderInformation.baml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\OrderRegistrationWindow.baml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\RegisterCostumerWindow.baml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\ReportingOfOrdersWindow.baml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\SignUpEmployeesWindow.baml
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\PackageInfoWindow.baml
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\ReportWindow.baml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WalletWindow.baml
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.g.resources
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.Properties.Resources.resources
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.GenerateResource.cache
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CoreCompileInputs.cache
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.csproj.CopyComplete
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WalletWindow.g.cs
-C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WalletWindow.baml
->>>>>>> hossein
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.exe
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.pdb
