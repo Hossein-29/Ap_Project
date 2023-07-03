@@ -97,8 +97,20 @@
     <Compile Include="SignUpEmployeesWindow.xaml.cs">
       <DependentUpon>SignUpEmployeesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PackageInfoWindow.xaml.cs">
+      <DependentUpon>PackageInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportWindow.xaml.cs">
+      <DependentUpon>ReportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WalletWindow.xaml.cs">
+      <DependentUpon>WalletWindow.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerWindow.xaml.cs">
+      <DependentUpon>CustomerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -137,6 +149,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -162,6 +178,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SignUpEmployeesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PackageInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WalletWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

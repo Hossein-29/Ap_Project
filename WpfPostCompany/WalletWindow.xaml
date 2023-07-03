@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfPostCompany.WalletWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPostCompany"
+        mc:Ignorable="d"
+        Title="WalletWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="BlueViolet">
+            <StackPanel Margin="20, 50">
+                <Label Foreground="White" FontSize="20" FontWeight="DemiBold">Current Account balance : </Label>
+                <Label Name="account_balance_lbl" Foreground="Black" FontSize="20">0000000</Label>
+                <Button Foreground="White" Background="LightGreen" Width="200" Margin="0, 30, 0, 0" FontSize="25" FontWeight="Normal">Charge Account</Button>
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="1" Background="#ba66ff">
+            <StackPanel Margin="20, 50" Width="300">
+                <Label>card number</Label>
+                <TextBox Width="200"></TextBox>
+                <Label>Valid Until</Label>
+                <TextBox Width="100"></TextBox>
+                <Label>Total</Label>
+                <TextBox Width="100"></TextBox>
+                <Button Width="100" Margin="0, 10">Submit payment</Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
