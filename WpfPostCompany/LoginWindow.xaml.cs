@@ -94,7 +94,7 @@ namespace WpfPostCompany
             }
             else if (UserStatus(UserNameInput.Text.ToString(), PasswordInput.Text.ToString()) is Customer)
             {
-
+                
             }
         }
         private void LoginBtn(object sender, RoutedEventArgs e)
@@ -131,5 +131,6 @@ namespace WpfPostCompany
             Timer.Tick += CurrentTime;
             Timer.Start();
         }
+
     }
 }

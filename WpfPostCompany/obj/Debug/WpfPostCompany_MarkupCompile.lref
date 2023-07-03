@@ -1,5 +1,6 @@
 ﻿
 
+<<<<<<< HEAD
 FC:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\DisplayPackageInformationWindow.xaml;;
 FC:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\EmployeePanel.xaml;;
 FC:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\LoginWindow.xaml;;
@@ -9,4 +10,11 @@ FC:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\OrderRegistrationWindo
 FC:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\RegisterCostumerWindow.xaml;;
 FC:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\ReportingOfOrdersWindow.xaml;;
 FC:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\SignUpEmployeesWindow.xaml;;
+=======
+FC:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\CustomerWindow.xaml;;
+FC:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\LoginWindow.xaml;;
+FC:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\PackageInfoWindow.xaml;;
+FC:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\ReportWindow.xaml;;
+FC:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\WalletWindow.xaml;;
+>>>>>>> hossein
 
