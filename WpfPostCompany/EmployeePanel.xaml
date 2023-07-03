@@ -5,7 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
-        Title="EmployeePanel" Height="720" Width="1250" Topmost="True" FlowDirection="LeftToRight" Top="0" Left="-10">
+        Title="EmployeePanel" Height="720" Width="1250" Topmost="True" FlowDirection="LeftToRight" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -16,7 +37,7 @@
 
 
         <Label Content="Employee Panel" Margin="436,8,394,0" VerticalAlignment="Top" FontSize="50" FontFamily="Forte" Padding="16,2,8,5" Foreground="White"/>
-        <Button Content="Register Costumer" Margin="130,117,803,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="RegisterCostumerBtn">
+        <Button  Template="{StaticResource NoMouseOverButtonTemplate}"  Content="Register Costumer" Margin="130,117,803,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Click="RegisterCostumerBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -37,7 +58,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Send Package Delivery Email" Margin="203,281,684,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="SendDeliveryEmail">
+        <Button  Template="{StaticResource NoMouseOverButtonTemplate}"  Content="Send Package Delivery Email" Margin="203,281,684,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Click="SendDeliveryEmail">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -58,7 +79,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Display Package Information" Margin="685,281,202,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="DisplayPackageInfoBtn">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Display Package Information" Margin="685,281,202,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Click="DisplayPackageInfoBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -79,7 +100,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Order Registration" Margin="131,440,777,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="OrderRegistrationBtn">
+        <Button  Template="{StaticResource NoMouseOverButtonTemplate}"  Content="Order Registration" Margin="131,440,777,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Click="OrderRegistrationBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -100,7 +121,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Reporting Of Orders" Margin="767,100,135,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="ReportingOfOrdersBtn">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Reporting Of Orders" Margin="767,100,135,0" VerticalAlignment="Top" Height="100" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Click="ReportingOfOrdersBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -121,7 +142,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Costumers Comments" Margin="793,438,134,158" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" FontSize="30" Click="ViewCostumerCommentsBtn">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Costumers Comments" Margin="793,438,134,158" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" FontSize="30" Click="ViewCostumerCommentsBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -143,7 +164,7 @@
             </Button.Background>
         </Button>
         <Label x:Name="EmployeeUserName" Content="User Name : " FontSize="40" Foreground="White" HorizontalAlignment="Left" Margin="24,14,0,0" VerticalAlignment="Top" Height="68" Width="347" FontFamily="Agency FB" Padding="5,7,5,5"/>
-        <Button Content="Back" Margin="42,605,963,0" VerticalAlignment="Top" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="#FFF6F6F6" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="#FF837E7E" Click="BackToLoginPanel">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Back" Margin="42,605,963,0" VerticalAlignment="Top" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="#FFF6F6F6" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="#FF040404" Click="BackToLoginPanel">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>

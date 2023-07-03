@@ -1,12 +1,32 @@
-﻿<Window x:Class="WpfPostCompany.LoginWindow"
+﻿<Window x:Class="WpfPostCompany.LoginWindow" Loaded="LoginWindowLoaded"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
-        Title="LoginWindow" Width="1250" Height="720" Topmost="True" FlowDirection="LeftToRight" Left="-10" Top="0">
-    
+        Title="LoginWindow" Width="1250" Height="720" Topmost="True" FlowDirection="LeftToRight" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -25,16 +45,18 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="400"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="400"></ColumnDefinition>
+            <ColumnDefinition Width="280.425"></ColumnDefinition>
+            <ColumnDefinition Width="119.575"/>
         </Grid.ColumnDefinitions>
+
         <Grid.RowDefinitions>
-
-            <RowDefinition Height="56"/>
+            <RowDefinition Height="86"/>
             <RowDefinition/>
-            <RowDefinition Height="56"></RowDefinition>
+            <RowDefinition Height="19.04"></RowDefinition>
         </Grid.RowDefinitions>
-
-        <Grid Grid.Row="1" Grid.Column="1" Background="#FFFAFAFA" RenderTransformOrigin="0.434,0.459">
+        <Label Grid.Row="0" Grid.Column="2" x:Name="CurrentTimeText" FontSize="40" FontFamily="Agency FB" Padding="212,5,5,5" Margin="27,7,-1,532" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Label Grid.Row="0" Content="Post Company" FontSize="60" FontFamily="Forte" Padding="68,0,5,5" Margin="-55,1,5,545" Grid.RowSpan="2"/>
+        <Grid Grid.Column="1" Background="#FFFAFAFA" RenderTransformOrigin="0.434,0.459" Margin="0,84,0,0" Grid.RowSpan="2">
             <Label Content="Login" FontSize="50" Margin="117,21,117,0" VerticalAlignment="Top" Height="70" Padding="35,0,8,0" FontFamily="Arial Black"/>
             <Label Content="UserName" Margin="42,118,308,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="18"/>
             <TextBox x:Name="UserNameInput" HorizontalAlignment="Left" Margin="68,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" FontSize="28" Padding="0,-3,0,0">
@@ -50,9 +72,9 @@
                 </TextBox.Effect>
             </TextBox>
             <Label Content="Don't have an account?" Margin="121,451,129,0" VerticalAlignment="Top" Height="38" FontSize="14" Foreground="#FF919191" Width="200" Padding="28,7,5,5"/>
-            <Button Content="Sign Up Now" Margin="150,491,150,0" VerticalAlignment="Top" FontFamily="Arial Black" FontWeight="Bold" Height="24" Width="150" Padding="15,5,20,5" Background="#FFFAFAFA" BorderThickness="0" Cursor="Arrow" Click="SignUpEmployeesBtn" x:Name="SignUpBtn" MouseEnter="MouseEnterHandler" MouseLeave="MouseLeaveHandler"/>
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Sign Up Now" Margin="150,491,150,0" VerticalAlignment="Top" FontFamily="Arial Black" FontWeight="Bold" Height="24" Width="150" Padding="15,5,20,5" Background="#FFFAFAFA" BorderThickness="0" Cursor="Hand" Click="SignUpEmployeesBtn" x:Name="SignUpBtn" MouseEnter="MouseEnterHandler" MouseLeave="MouseLeaveHandler"/>
         </Grid>
-        <Button Grid.Column="1" Content="Login" Margin="104,363,104,0" Grid.Row="1" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="LoginBtn">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Grid.Column="1" Content="Login" Margin="104,363,104,0" Grid.Row="1" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Click="LoginBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -73,5 +95,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Label Grid.Column="3" Content="Label" HorizontalAlignment="Left" Margin="81,-21,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
     </Grid>
 </Window>

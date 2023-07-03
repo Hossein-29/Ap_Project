@@ -5,7 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
-        Title="RegisterCostumer" Height="720" Width="1250" Topmost="True" FlowDirection="LeftToRight" Top="0" Left="-10">
+        Title="RegisterCostumer" Height="720" Width="1250" Topmost="True" FlowDirection="LeftToRight" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"></ColumnDefinition>
@@ -69,7 +90,7 @@
             </TextBox>
 
 
-            <Button Content="Sign Up" Margin="269,329,273,0" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="SignUpCostumerBtn">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Sign Up" Margin="269,329,273,0" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Click="SignUpCostumerBtn">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -91,7 +112,7 @@
                 </Button.Background>
             </Button>
         </Grid>
-        <Button Content="Back" Margin="59,0,737,0" VerticalAlignment="Center" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="White" Click="BackToEmployeePanel" Grid.ColumnSpan="2" Grid.Row="2">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Back" Margin="59,0,737,25" VerticalAlignment="Bottom" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Background="White" Click="BackToEmployeePanel" Grid.ColumnSpan="2" Grid.Row="2">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>

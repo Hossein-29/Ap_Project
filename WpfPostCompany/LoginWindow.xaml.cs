@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WpfPostCompany
 {
@@ -30,6 +31,24 @@ namespace WpfPostCompany
             InitializeComponent();
 
         }
+
+        private void CurrentTime(object sender, EventArgs e)
+        {
+            DateTime time = DateTime.Now;
+            string s = time.Second.ToString();
+            string m = time.Minute.ToString();
+            string h = time.Hour.ToString();
+
+            if (time.Second < 10)
+                s = $"0{time.Second}";
+            if (time.Minute < 10)
+                m = $"0{time.Minute}";
+            if (time.Hour < 10)
+                h = $"0{time.Hour}";
+
+            CurrentTimeText.Content = $"{h} : {m} : {s}";
+        }
+
         public dynamic UserStatus(string name, string password)
         {
             var Customer = (from customer in _db.Customers
@@ -48,7 +67,6 @@ namespace WpfPostCompany
             else
                 return Customer;
         }
-
 
         public void Login()
         {
@@ -70,7 +88,7 @@ namespace WpfPostCompany
             else if (Temp is Employee)
             {
                 var Window = new EmployeePanel(Temp);
-                MessageBox.Show("welcome to employee panel");
+                MessageBox.Show("welcome to your panel", "", MessageBoxButton.OK);
                 Window.Show();
                 this.Close();
             }
@@ -96,7 +114,6 @@ namespace WpfPostCompany
             Window.Show();
             this.Close();
         }
-
         private void MouseEnterHandler(object sender, MouseEventArgs e)
         {
             SignUpBtn.Foreground = new SolidColorBrush(Colors.SkyBlue);
@@ -105,6 +122,14 @@ namespace WpfPostCompany
         private void MouseLeaveHandler(object sender, MouseEventArgs e)
         {
             SignUpBtn.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        private void LoginWindowLoaded(object sender, RoutedEventArgs e)
+        {
+            DispatcherTimer Timer = new DispatcherTimer();
+            Timer.Interval = new TimeSpan(0, 0, 1);
+            Timer.Tick += CurrentTime;
+            Timer.Start();
         }
     }
 }

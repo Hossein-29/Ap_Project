@@ -5,7 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
-        Title="MainOrderRegistrationWindow" Height="720" Width="1250" FlowDirection="LeftToRight" Topmost="True" Top="0" Left="-10">
+        Title="MainOrderRegistrationWindow" Height="720" Width="1250" FlowDirection="LeftToRight" Topmost="True" WindowStartupLocation="CenterScreen" >
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"></ColumnDefinition>
@@ -66,7 +87,13 @@
             </TextBox>
             <Label Content="Post Type" HorizontalAlignment="Left" Margin="442,221,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="20" Width="100"/>
 
-            <ComboBox Margin="589,213,103,271" Width="NaN" x:Name="PostType" FontSize="15">
+            <ComboBox Margin="589,213,103,271" Width="NaN" x:Name="PostType" FontSize="15" BorderThickness="1,1,1,1" Text="" Padding="20,3,5,3">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF9A3F3F" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
                 <ComboBoxItem Content="Ordinary Post"></ComboBoxItem>
                 <ComboBoxItem Content="Leading Post"></ComboBoxItem>
             </ComboBox>
@@ -76,7 +103,7 @@
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
             </TextBox>
-            <Button Content="Final Price" Margin="277,433,278,0" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="CalculateFinalPriceBtn">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Final Price" Margin="277,433,278,0" VerticalAlignment="Top" Height="50" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="25" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Click="CalculateFinalPriceBtn">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
