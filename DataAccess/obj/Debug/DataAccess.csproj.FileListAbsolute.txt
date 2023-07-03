@@ -10,3 +10,5 @@ C:\Users\Abolfazl\source\repos\Ap_Project\DataAccess\bin\Debug\EntityFramework.S
 C:\Users\Abolfazl\source\repos\Ap_Project\DataAccess\bin\Debug\EntityFramework.xml
 C:\Users\Abolfazl\source\repos\Ap_Project\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Abolfazl\source\repos\Ap_Project\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\Abolfazl\source\repos\Ap_Project\DataAccess\bin\Debug\WPFCustomMessageBox.dll
+C:\Users\Abolfazl\source\repos\Ap_Project\DataAccess\bin\Debug\WPFCustomMessageBox.xml

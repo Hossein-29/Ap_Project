@@ -54,3 +54,5 @@ C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\EntityFramewo
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\DataAccess.dll.config
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.xml
 C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\WPFCustomMessageBox.dll
+C:\Users\Abolfazl\source\repos\Ap_Project\WpfPostCompany\bin\Debug\WPFCustomMessageBox.xml

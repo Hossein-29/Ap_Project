@@ -5,7 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
-        Title="OrderRegistrationWindow" Height="720" Width="1250" Topmost="True" Top="0" Left="-10">
+        Title="OrderRegistrationWindow" Height="720" Width="1250" Topmost="True" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -15,25 +36,26 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Label Content="Order Registration" Margin="394,8,394,0" VerticalAlignment="Top" FontSize="50" FontFamily="Forte" Padding="16,2,8,5" Foreground="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Label Content="Please Enter Costumer SSN : " Margin="98,114,307,0" VerticalAlignment="Top" Height="62" FontFamily="Bahnschrift SemiLight SemiCondensed" FontSize="48"/>
+        <Label Content="Please Enter Costumer SSN : " Margin="90,120,315,0" VerticalAlignment="Top" Height="62" FontFamily="Bahnschrift SemiLight SemiCondensed" FontSize="48"/>
         <TextBox x:Name="SSN" HorizontalAlignment="Left" Margin="288,203,0,0" TextWrapping="Wrap" FontSize="45" VerticalAlignment="Top" Width="651" Height="68" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5">
             <TextBox.Effect>
                 <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
             </TextBox.Effect>
         </TextBox>
-        <Button Content="Search SSN" Margin="271,362,271,0" VerticalAlignment="Top" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Width="400" Background="Black" Click="SearchSSnBtn">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Search SSN" Margin="271,362,271,0" VerticalAlignment="Top" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="30" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Width="400" Background="Black" Click="SearchSSnBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Back" Margin="42,605,963,0" VerticalAlignment="Top" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="White" Click="BackToEmployeePanel">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Back" Margin="58,609,947,25" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Background="White" Click="BackToEmployeePanel">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
                 </Style>
             </Button.Resources>
         </Button>
+        <Label Content="User Name :" HorizontalAlignment="Left" Margin="24,13,0,0" VerticalAlignment="Top" Height="65" Width="352" FontSize="40" FontFamily="Agency FB"/>
     </Grid>
 </Window>

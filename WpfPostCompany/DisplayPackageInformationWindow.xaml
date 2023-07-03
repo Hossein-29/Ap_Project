@@ -5,7 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
-        Title="DisplayPackageInformationWindow" Height="720" Width="1250" FlowDirection="LeftToRight" Top="0" Left="-10" Topmost="True">
+        Title="DisplayPackageInformationWindow" Height="720" Width="1250" FlowDirection="LeftToRight" WindowStartupLocation="CenterScreen" Topmost="True">
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -22,7 +43,7 @@
             </TextBox.Effect>
         </TextBox>
         <Label Content="Order ID" Margin="61,123,962,462" FontFamily="Bahnschrift SemiLight Condensed" FontSize="48" Padding="31,21,5,5"/>
-        <Button Content="Display Order Information" Margin="437,380,438,0" VerticalAlignment="Top" Height="84" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="35" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="Black" Click="DisplayOrderInfoBtn">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Display Order Information" Margin="437,380,438,0" VerticalAlignment="Top" Height="84" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="35" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Background="Black" Click="DisplayOrderInfoBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
@@ -30,7 +51,7 @@
             </Button.Resources>
         </Button>
         <Label Content="User Name : " x:Name="EmployeeUserName" FontFamily="Agency FB" FontSize="45" HorizontalAlignment="Left" Margin="21,16,0,0" VerticalAlignment="Top" Width="400" Height="81" Padding="7,5,5,5"/>
-        <Button Content="Back" Margin="42,605,963,0" VerticalAlignment="Top" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Background="White" Click="BackToEmployeePanel">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Back" Margin="58,609,947,25" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Background="White" Click="BackToEmployeePanel">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>

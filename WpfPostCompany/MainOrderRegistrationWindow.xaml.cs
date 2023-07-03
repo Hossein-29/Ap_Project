@@ -83,13 +83,10 @@ namespace WpfPostCompany
             else if (PhoneNumber.Text != "" && !InputValidation.PhoneValidation(PhoneNumber.Text.ToString()))
                 throw new Exception("invalid phone number");
 
+          var Result =  WPFCustomMessageBox.CustomMessageBox.ShowOKCancel($"Final Price : {FinalPrice()}", "", "Register", "Cancel");
+           
 
-
-            var result = MessageBox.Show($"final price : {FinalPrice()}\n press order to register order ?", "",
-                                         MessageBoxButtons.YesNo,
-                                         MessageBoxIcon.Question);
-
-            if (result == System.Windows.Forms.DialogResult.OK)
+            if (Result == MessageBoxResult.OK)
             {
                 _order.OrderID = _db.Orders.Count() + 1;
                 _order.CustomerSSN = SSN;

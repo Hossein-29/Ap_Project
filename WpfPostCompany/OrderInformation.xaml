@@ -5,7 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
-        Title="OrderInformation" Height="720" Width="1250" Topmost="True" Left="-10" Top="0" FlowDirection="LeftToRight">
+        Title="OrderInformation" Height="720" Width="1250" Topmost="True" WindowStartupLocation="CenterScreen" FlowDirection="LeftToRight">
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid HorizontalAlignment="Left" Width="1250">
         <Label Content="Reporting Of Orders" Margin="386,-1,388,0" VerticalAlignment="Top" FontFamily="Forte" FontSize="50" Padding="21,5,5,5"/>
         <Grid Margin="16,78,385,30">
@@ -94,7 +115,7 @@
             </Grid>
         </Grid>
 
-        <Button Content="Save Changes" Margin="908,561,37,0" VerticalAlignment="Top" Height="89" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="40" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="SaveChangesBtn">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Save Changes" Margin="908,561,37,0" VerticalAlignment="Top" Height="89" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="40" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Click="SaveChangesBtn">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
