@@ -1,7 +1,4 @@
-SenderAddress,ReceiverAddress,Weight,PackageType,Phone,PostType,CustomerSSN,OrderID,ShippingStatus,Comment,FinalPrice,HasExpensiveContent,Date,FirstName,LastName,SSN,Email,Phone,UserName,Password,AccountBalance
-mashHad,tehran,90,0,09218138345,1,324,2,1,,10000,0,04/01/2021 17:12:05,,,,,,,,0
-tehran,karaj,10,1,,1,123,1,0,,25000,1,07/04/2023 10:12:40,,,,,,,,0
-tehran,jannat abad,1,0,,0,23232,3,0,,24000,1,07/04/2023 10:23:15,taha,shahidi,23232,yahoo,0912,shdii,2132,90
-sabzevar pishiar peklak 24 vahed 5557,garmasar heshemi 21 metri jey,2,2,09214578911,1,23232,4,3,,216000,1,07/04/2023 11:39:41,taha,shahidi,23232,yahoo,0912,shdii,2132,90
+SenderAddress,ReceiverAddress,Weight,PackageType,Phone,PostType,CustomerSSN,OrderID,ShippingStatus,Comment,FinalPrice,HasExpensiveContent,CreatedAt,FirstName,LastName,SSN,Email,Phone,UserName,Password,AccountBalance
+shoosh,porozi pelak 21 vahed 1121,324,1,09113399855,0,23232,7,1,,130000,1,02/21/2022 12:02:45,taha,shahidi,23232,yahoo,0912,shdii,2132,90
 gharb tehran,narmak,90,1,,0,23232,5,0,,3222000,0,07/04/2023 13:51:08,taha,shahidi,23232,yahoo,0912,shdii,2132,90
 tehran pars - farhang sara,sadeghiyed - gas station pleak 32,90,1,09218134321,0,23232,6,0,,3222000,0,07/04/2023 13:52:15,taha,shahidi,23232,yahoo,0912,shdii,2132,90

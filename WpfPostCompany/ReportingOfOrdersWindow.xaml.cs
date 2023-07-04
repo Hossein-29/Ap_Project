@@ -124,7 +124,7 @@ namespace WpfPostCompany
 
         private List<Order> SortListByDateTime(List<Order> list)
         {
-            var Orders = list.OrderBy(x => x.Date).Select(n => n).ToList();
+            var Orders = list.OrderBy(x => x.CreatedAt).Select(n => n).ToList();
             return Orders;
         }
 

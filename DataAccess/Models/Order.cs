@@ -47,7 +47,7 @@ namespace DataAccess.Models
         public int HasExpensiveContent { get; set; }
 
         [Required]
-        public DateTime Date { get; set; }
+        public DateTime CreatedAt { get; set; }
         public virtual Customer Customer { get; set; }
     }
 }
