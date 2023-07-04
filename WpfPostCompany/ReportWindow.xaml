@@ -5,8 +5,108 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
-        Title="ReportWindow" Height="720" Width="1250">
-    <Grid>
-        <DataGrid Name="report_dtgrid"></DataGrid>
+        Title="ReportingOfOrdersWindow" Height="720" Width="1250" FlowDirection="LeftToRight" Topmost="True" WindowStartupLocation="CenterScreen" >
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+             Value="False">
+                    <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid Background="White">
+        <Label Content="User Name : "  x:Name="CustomerUserNameTxt" FontSize="40" Foreground="Black" RenderTransformOrigin="0.868,0.871" Margin="18,4,867,616" FontFamily="Agency FB" Padding="7,10,5,5"/>
+        <Label Content="Reporting Of Orders" Margin="386,7,388,0" VerticalAlignment="Top" FontFamily="Forte" FontSize="50" Padding="21,5,5,5"/>
+
+        <Grid Margin="17,94,493,40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="120"></RowDefinition>
+                <RowDefinition Height="120"></RowDefinition>
+                <RowDefinition Height="120"></RowDefinition>
+                <RowDefinition Height="120"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF97A293"/>
+                    <GradientStop Color="#FF32878D" Offset="0.616"/>
+                    <GradientStop Color="#FF86D8BE"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label Content="Order By" FontSize="50" Margin="223,0,223,0" VerticalAlignment="Center" Height="80" FontFamily="Curlz MT" Padding="53,5,5,5"/>
+
+            <Grid Grid.Row="1">
+                <Label Grid.Row="3" Content="Package Weight" FontSize="30" FontFamily="Curlz MT"></Label>
+                <TextBox Margin="257,1,136,58" x:Name="PackageWeightText" FontSize="40">
+                    <TextBox.Effect>
+                        <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
+                    </TextBox.Effect>
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Label Grid.Row="3" Content="Price" FontSize="30" FontFamily="Curlz MT"></Label>
+                <TextBox Margin="257,-1,136,56" x:Name="PriceText" FontSize="40">
+                    <TextBox.Effect>
+                        <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
+                    </TextBox.Effect>
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Label Content="Post Type" FontSize="30" FontFamily="Curlz MT"/>
+                <ComboBox x:Name="PostTypeCombo" Margin="257,-3,288,43" Height="60" FontSize="20">
+                    <ComboBoxItem Content="Ordinary Post"></ComboBoxItem>
+                    <ComboBoxItem Content="Leading Post"></ComboBoxItem>
+                </ComboBox>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Label Content="Package Type" FontSize="30" FontFamily="Curlz MT"/>
+                <ComboBox x:Name="PackageTypeCombo" Margin="257,-3,288,39" Height="60" FontSize="20">
+                    <ComboBoxItem Content="Object"></ComboBoxItem>
+                    <ComboBoxItem Content="Document"></ComboBoxItem>
+                    <ComboBoxItem Content="Breakable"></ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </Grid>
+        <Button Content="Search" Margin="818,349,41,0" VerticalAlignment="Top" Height="89" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="40" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Arrow" Click="AdvancedSearchBtn">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="-72.5" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF32878D" Offset="0.6"/>
+                    <GradientStop Color="#FF86D8BE" Offset="0.1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Back" Margin="905,0,102,54" VerticalAlignment="Bottom" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="White" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Background="Black" Click="BackToCustomerPanel">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>

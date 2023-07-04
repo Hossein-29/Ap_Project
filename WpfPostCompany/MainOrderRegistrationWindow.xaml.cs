@@ -19,6 +19,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPFCustomMessageBox;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using MessageBox = System.Windows.Forms.MessageBox;
 
@@ -83,7 +84,7 @@ namespace WpfPostCompany
             else if (PhoneNumber.Text != "" && !InputValidation.PhoneValidation(PhoneNumber.Text.ToString()))
                 throw new Exception("invalid phone number");
 
-            var Result = WPFCustomMessageBox.CustomMessageBox.ShowOKCancel($"Final Price : {FinalPrice()}", "", "Register", "Cancel");
+            var Result = CustomMessageBox.ShowOKCancel($"Final Price : {FinalPrice()}", "", "Register", "Cancel");
 
 
             if (Result == MessageBoxResult.OK)

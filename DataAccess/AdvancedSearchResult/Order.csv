@@ -1,4 +1,0 @@
-SenderAddress,ReceiverAddress,Weight,PackageType,Phone,PostType,CustomerSSN,OrderID,ShippingStatus,Comment,FinalPrice,HasExpensiveContent,CreatedAt,FirstName,LastName,SSN,Email,Phone,UserName,Password,AccountBalance
-shoosh,porozi pelak 21 vahed 1121,324,1,09113399855,0,23232,7,1,,130000,1,02/21/2022 12:02:45,taha,shahidi,23232,yahoo,0912,shdii,2132,90
-gharb tehran,narmak,90,1,,0,23232,5,0,,3222000,0,07/04/2023 13:51:08,taha,shahidi,23232,yahoo,0912,shdii,2132,90
-tehran pars - farhang sara,sadeghiyed - gas station pleak 32,90,1,09218134321,0,23232,6,0,,3222000,0,07/04/2023 13:52:15,taha,shahidi,23232,yahoo,0912,shdii,2132,90

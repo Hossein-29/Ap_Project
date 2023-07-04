@@ -1,0 +1,2 @@
+SenderAddress,ReceiverAddress,Weight,PackageType,Phone,PostType,CustomerSSN,OrderID,ShippingStatus,Comment,FinalPrice,HasExpensiveContent,CreatedAt,FirstName,LastName,SSN,Email,Phone,UserName,Password,AccountBalance
+mkm,mkmkkm,15,1,,1,23232,8,0,,783000,0,07/04/2023 17:15:08,taha,shahidi,23232,yahoo,0912,shdii,2132,90
