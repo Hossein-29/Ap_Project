@@ -5,7 +5,6 @@ namespace DataAccess.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-    using System.Net.Http.Headers;
 
     [Table("Employee")]
     public partial class Employee
