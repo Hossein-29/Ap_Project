@@ -58,7 +58,10 @@ namespace WpfPostCompany
 
         private void profile_btn_Click(object sender, RoutedEventArgs e)
         {
-
+            ProfileWindow profileWindow = new ProfileWindow(customer);
+            this.Hide();
+            profileWindow.ShowDialog();
+            this.ShowDialog();
         }
     }
 }
