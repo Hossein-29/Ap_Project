@@ -94,7 +94,10 @@ namespace WpfPostCompany
             }
             else if (UserStatus(UserNameInput.Text.ToString(), PasswordInput.Text.ToString()) is Customer)
             {
-                
+                var Window = new CustomerWindow(Temp);
+                MessageBox.Show("welcome to your panel", "", MessageBoxButton.OK);
+                Window.Show();
+                this.Close();
             }
         }
         private void LoginBtn(object sender, RoutedEventArgs e)
