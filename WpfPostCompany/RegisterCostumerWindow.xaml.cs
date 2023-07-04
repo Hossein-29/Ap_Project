@@ -58,8 +58,8 @@ namespace WpfPostCompany
                 throw new Exception("invalid email format");
 
             _db.Customers.Add(_customer);
-            _customer.UserName = DataCreater.CreateCustomerUserName();
-            _customer.Password = DataCreater.CreateCustomerPassword();
+            _customer.UserName = DataCreator.CreateCustomerUserName();
+            _customer.Password = DataCreator.CreateCustomerPassword();
             _db.SaveChanges();
             var Window = new EmployeePanel(Employee);
             MessageBox.Show("customer registered successfully");

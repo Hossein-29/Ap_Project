@@ -92,7 +92,7 @@ namespace WpfPostCompany
                 _order.CustomerSSN = SSN;
                 _order.PackageType = PackageType.SelectedIndex;
                 _order.PostType = PostType.SelectedIndex;
-
+                _order.Date = DateTime.Now;
                 if (HasExpensiveContent.IsChecked == false)
                     _order.HasExpensiveContent = 0;
                 else
@@ -114,7 +114,6 @@ namespace WpfPostCompany
                 Window.Show();
                 this.Close();
             }
-
         }
         private void CalculateFinalPriceBtn(object sender, RoutedEventArgs e)
         {

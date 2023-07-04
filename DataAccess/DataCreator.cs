@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class DataCreater
+    public class DataCreator
     {
         static PostCompanyEntities _db = new PostCompanyEntities();
         static public bool IsUserNameExist(string userName)
@@ -71,6 +71,13 @@ namespace DataAccess
                             where customer.UserName == username
                             select customer).FirstOrDefault();
             return Customer;
+        }
+        public static Order ReturnOrder(int id)
+        {
+            var Order = (from order in _db.Orders
+                         where order.OrderID == id
+                         select order).FirstOrDefault();
+            return Order;
         }
         static public string PostType(int index)
         {

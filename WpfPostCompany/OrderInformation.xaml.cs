@@ -51,9 +51,9 @@ namespace WpfPostCompany
             SenderAddress.Content += Order.SenderAddress;
             ReceiverAddress.Content += Order.ReceiverAddress;
             Weight.Content += Order.Weight.ToString();
-            PackageType.Content += DataCreater.PackageType(Order.PackageType);
-            PostType.Content += DataCreater.PostType(Order.PostType);
-            HasExpensiveContent.Content += DataCreater.HasExpensiveContent(Order.HasExpensiveContent);
+            PackageType.Content += DataCreator.PackageType(Order.PackageType);
+            PostType.Content += DataCreator.PostType(Order.PostType);
+            HasExpensiveContent.Content += DataCreator.HasExpensiveContent(Order.HasExpensiveContent);
             Phone.Content += Order.Phone;
             Price.Content += Order.FinalPrice.ToString();
             Comment.Content += Order.Comment;

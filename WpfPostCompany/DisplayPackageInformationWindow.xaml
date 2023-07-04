@@ -51,7 +51,7 @@
             </Button.Resources>
         </Button>
         <Label Content="User Name : " x:Name="EmployeeUserName" FontFamily="Agency FB" FontSize="45" HorizontalAlignment="Left" Margin="21,16,0,0" VerticalAlignment="Top" Width="400" Height="81" Padding="7,5,5,5"/>
-        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Back" Margin="58,609,947,25" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Background="White" Click="BackToEmployeePanel">
+        <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Back" Margin="58,592,927,25" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="Black" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Background="White" Click="BackToEmployeePanel">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
