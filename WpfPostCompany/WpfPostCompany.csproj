@@ -75,6 +75,7 @@
     <Compile Include="DisplayPackageInformationWindow.xaml.cs">
       <DependentUpon>DisplayPackageInformationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EmailSender.cs" />
     <Compile Include="EmployeePanel.xaml.cs">
       <DependentUpon>EmployeePanel.xaml</DependentUpon>
     </Compile>
