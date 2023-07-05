@@ -51,7 +51,7 @@
                     <ColumnDefinition Width="425"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0" Content="Order Information" FontFamily="Agency FB" FontSize="50" Foreground="Red"></Label>
-                <Label Grid.Column="1" Content="Order ID : " FontFamily="Curlz MT" FontSize="50" Foreground="#FFEFEFEF" Padding="95,5,5,5" x:Name="OrderID"/>
+                <Label Grid.Column="1" Content="Order ID : " FontFamily="Curlz MT" FontSize="50" Foreground="White" Padding="95,5,5,5" x:Name="OrderID"/>
             </Grid>
             <Grid Grid.Row="1">
                 <Label Content="Sender Adress : " Name="SenderAddress" FontFamily="Californian FB" FontSize="30"></Label>
