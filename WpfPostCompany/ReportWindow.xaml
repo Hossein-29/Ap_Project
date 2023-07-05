@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="ReportWindow" Height="720" Width="1250">
     <Grid>
-        <DataGrid Name="report_dtgrid"></DataGrid>
+        <DataGrid Name="report_dtgrid" Width="auto" HorizontalAlignment="Center" Background="Gray" FontSize="15"></DataGrid>
     </Grid>
 </Window>

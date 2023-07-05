@@ -65,5 +65,11 @@ namespace WpfPostCompany
                 }
             }
         }
+
+        private void current_btn_Click(object sender, RoutedEventArgs e)
+        {
+            username_txtbox.Text = customer.UserName;
+            password_txtbox.Text = customer.Password;
+        }
     }
 }

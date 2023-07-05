@@ -42,8 +42,9 @@
                 <TextBox IsEnabled="false" SelectionBrush="Green" FontSize="20" Name="account_balance_txtbox">15000</TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Width="120" Height="30" Margin="10, 20" HorizontalAlignment="Right" Background="PaleVioletRed" Foreground="White" FontSize="15" FontWeight="Medium">Current</Button>
-                <Button Width="120" Height="30" Margin="10, 20" HorizontalAlignment="Right" Background="LightGreen" Foreground="White" FontSize="15" FontWeight="Medium" Name="save_changes_btn" Click="save_changes_btn_Click">Save Changes</Button>
+
+                <Button Width="120" Height="30" Margin="10, 20" HorizontalAlignment="Right" Background="PaleVioletRed" Foreground="White" FontSize="15" Name="current_btn" Click="current_btn_Click">Current</Button>
+                <Button Width="120" Height="30" Margin="10, 20" HorizontalAlignment="Right" Background="LightGreen" Foreground="White" FontSize="15" Name="save_changes_btn" Click="save_changes_btn_Click">Save Changes</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -50,3 +50,4 @@ C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.exe
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.pdb
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\ProfileWindow.g.cs
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\ProfileWindow.baml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\App.baml
