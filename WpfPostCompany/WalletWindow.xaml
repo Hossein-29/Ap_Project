@@ -12,22 +12,34 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="0" Background="BlueViolet">
+        <Border Grid.Column="0" Background="BlueViolet" Margin="10">
             <StackPanel Margin="20, 50">
-                <Label Foreground="White" FontSize="20" FontWeight="DemiBold">Current Account balance : </Label>
-                <Label Name="account_balance_lbl" Foreground="Black" FontSize="20">0000000</Label>
-                <Button Foreground="White" Background="LightGreen" Width="200" Margin="0, 30, 0, 0" FontSize="25" FontWeight="Normal">Charge Account</Button>
+                <Label Foreground="White" FontSize="20" FontWeight="DemiBold">Account balance : </Label>
+                <Label Name="account_balance_lbl" Foreground="#b2baad" FontSize="20">0000000</Label>
+                <Button Foreground="White" Background="Blue" Width="200" Height="50" Margin="0, 30, 0, 0" FontSize="25" Name="charge_account_btn" Click="charge_account_btn_Click">Charge Account</Button>
             </StackPanel>
         </Border>
-        <Border Grid.Column="1" Background="#ba66ff">
-            <StackPanel Margin="20, 50" Width="300">
-                <Label>card number</Label>
-                <TextBox Width="200"></TextBox>
-                <Label>Valid Until</Label>
-                <TextBox Width="100"></TextBox>
-                <Label>Total</Label>
-                <TextBox Width="100"></TextBox>
-                <Button Width="100" Margin="0, 10">Submit payment</Button>
+        <Border Name="payment_border" Grid.Column="1" Visibility="Hidden" Background="#ba66ff" Margin="10">
+            <StackPanel Margin="20, 50" Width="400">
+                <StackPanel Orientation="Horizontal" Margin="0, 10">
+                    <Label Margin="10, 0" FontSize="15">Card Number</Label>
+                    <TextBox Width="200" FontSize="15" Name="card_number_txtbox" MaxLength="16"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0, 10">
+                    <Label Margin="10, 0" FontSize="15">CVV Number</Label>
+                    <TextBox Width="100" FontSize="15" Name="cvv_number_txtbox" MaxLength="4"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0, 10">
+                    <Label Margin="10, 0" FontSize="15">Valid Until</Label>
+                    <TextBox Width="50" FontSize="15" Name="year_txtbox" MaxLength="2"></TextBox>
+                    <Label FontSize="15">/</Label>
+                    <TextBox Width="50" FontSize="15" Name="month_txtbox" MaxLength="2"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0, 10">
+                    <Label Margin="10, 0" FontSize="15">Total Pay</Label>
+                    <TextBox Width="100" FontSize="15" Name="total_pay_txtbox"></TextBox>
+                </StackPanel>
+                <Button FontSize="15" Width="130" Height="40" Margin="0, 5" Foreground="White" Background="#6cf01a" Name="submit_payment_btn" Click="submit_payment_btn_Click">Submit Payment</Button>
             </StackPanel>
         </Border>
     </Grid>
