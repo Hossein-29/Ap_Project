@@ -19,7 +19,7 @@ namespace DataAccess
         }
         public static bool EmailValidation(string email)
         {
-            Regex regex = new Regex("^([a-zA-Z]{3,32})@[a-z A-Z]{3,32}.([a-zA-z]){2,3}$");
+            Regex regex = new Regex("^([a-z A-Z 0-9]{3,32})@[a-z A-Z 0-9]{3,32}.([a-zA-z]){2,3}$");
             if (regex.IsMatch(email))
                 return true;
             return false;
