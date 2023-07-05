@@ -68,5 +68,27 @@ namespace DataAccess
             }
             return Sum % 10 == 0;
         }
+
+        public static bool CVVNumberValidation(string CVVNumber)
+        {
+            if(CVVNumber.Length != 3 && CVVNumber.Length != 4)
+            {
+                return false;
+            }
+            int res;
+            bool isInt = int.TryParse(CVVNumber, out res);
+            if (!isInt)
+            {
+                return false;
+            }
+            else if(res < 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
