@@ -30,7 +30,7 @@ namespace WpfPostCompany
             EmployeeUserName.Content += Employee.UserName;
         }
 
- 
+
 
         private void OrderRegistrationBtn(object sender, RoutedEventArgs e)
         {
@@ -41,7 +41,7 @@ namespace WpfPostCompany
 
         private void SendDeliveryEmail(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void RegisterCostumerBtn(object sender, RoutedEventArgs e)
@@ -60,7 +60,9 @@ namespace WpfPostCompany
 
         private void ViewCostumerCommentsBtn(object sender, RoutedEventArgs e)
         {
-
+            var Window = new ViewCustomerCommentWindow(Employee);
+            Window.Show();
+            this.Close();
         }
 
         private void ReportingOfOrdersBtn(object sender, RoutedEventArgs e)

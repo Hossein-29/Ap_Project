@@ -30,30 +30,27 @@ namespace WpfPostCompany
                                         customer.Phone + "\n" +
                                         customer.SSN + "\n" +
                                         customer.Email + "\n";
-        } 
+        }
 
         private void report_btn_Click(object sender, RoutedEventArgs e)
         {
-            ReportWindow reportWindow = new ReportWindow(customer);
-            this.Hide();
-            reportWindow.ShowDialog();
-            this.ShowDialog();
+            ReportWindow Window = new ReportWindow(customer);
+            Window.Show();
+            this.Close();
         }
 
         private void package_info_btn_Click(object sender, RoutedEventArgs e)
         {
-            PackageInfoWindow packageInfoWindow = new PackageInfoWindow(customer);
-            this.Hide();
-            packageInfoWindow.ShowDialog();
-            this.ShowDialog();
+            PackageInfoWindow Window = new PackageInfoWindow(customer);
+            Window.Show();
+            this.Close();
         }
 
         private void wallet_btn_Click(object sender, RoutedEventArgs e)
         {
-            WalletWindow walletWindow = new WalletWindow(customer);
-            this.Hide();
-            walletWindow.ShowDialog();
-            this.ShowDialog();
+            WalletWindow Window = new WalletWindow(customer);
+            Window.Show();
+            this.Close();
         }
 
         private void profile_btn_Click(object sender, RoutedEventArgs e)

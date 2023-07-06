@@ -19,6 +19,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPFCustomMessageBox;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using MessageBox = System.Windows.Forms.MessageBox;
 
@@ -62,7 +63,7 @@ namespace WpfPostCompany
                 int Coefficient = 0;
                 Coefficient += (int)Math.Ceiling(Weight / 0.5);
                 if (Coefficient != 0)
-                    Price *= Coefficient * 1.2;
+                    Price *= Math.Pow(1.2, Coefficient);
             }
             return Price;
         }
@@ -83,8 +84,8 @@ namespace WpfPostCompany
             else if (PhoneNumber.Text != "" && !InputValidation.PhoneValidation(PhoneNumber.Text.ToString()))
                 throw new Exception("invalid phone number");
 
-          var Result =  WPFCustomMessageBox.CustomMessageBox.ShowOKCancel($"Final Price : {FinalPrice()}", "", "Register", "Cancel");
-           
+            var Result = CustomMessageBox.ShowOKCancel($"Final Price : {FinalPrice()}", "", "Register", "Cancel");
+
 
             if (Result == MessageBoxResult.OK)
             {
@@ -92,7 +93,7 @@ namespace WpfPostCompany
                 _order.CustomerSSN = SSN;
                 _order.PackageType = PackageType.SelectedIndex;
                 _order.PostType = PostType.SelectedIndex;
-
+                _order.CreatedAt = DateTime.Now;
                 if (HasExpensiveContent.IsChecked == false)
                     _order.HasExpensiveContent = 0;
                 else
@@ -108,13 +109,12 @@ namespace WpfPostCompany
                 Window.Show();
                 this.Close();
             }
-            else
-            {
-                var Window = new EmployeePanel(Employee);
-                Window.Show();
-                this.Close();
-            }
-
+            //else
+            //{
+            //    var Window = new EmployeePanel(Employee);
+            //    Window.Show();
+            //    this.Close();
+            //}
         }
         private void CalculateFinalPriceBtn(object sender, RoutedEventArgs e)
         {

@@ -31,6 +31,11 @@ namespace WpfPostCompany
             Id = id;
             EmployeeUserName.Content += Employee.UserName;
             DisplayOrderInfo();
+            if (ShippingStatus.SelectedIndex == 3)
+            {
+                var ParentContainer = SaveChangeButton.Parent as Panel;
+                ParentContainer.Children.Remove(SaveChangeButton);
+            }
         }
         public Order ReturnOrder(int id)
         {
@@ -39,6 +44,7 @@ namespace WpfPostCompany
                          select order).FirstOrDefault();
             return Order;
         }
+
         public void DisplayOrderInfo()
         {
             Order Order = ReturnOrder(Id);
@@ -51,18 +57,31 @@ namespace WpfPostCompany
             SenderAddress.Content += Order.SenderAddress;
             ReceiverAddress.Content += Order.ReceiverAddress;
             Weight.Content += Order.Weight.ToString();
-            PackageType.Content += DataCreater.PackageType(Order.PackageType);
-            PostType.Content += DataCreater.PostType(Order.PostType);
-            HasExpensiveContent.Content += DataCreater.HasExpensiveContent(Order.HasExpensiveContent);
+            PackageType.Content += DataCreator.PackageType(Order.PackageType);
+            PostType.Content += DataCreator.PostType(Order.PostType);
+            HasExpensiveContent.Content += DataCreator.HasExpensiveContent(Order.HasExpensiveContent);
             Phone.Content += Order.Phone;
             Price.Content += Order.FinalPrice.ToString();
-            Comment.Content += Order.Comment;
+        }
+        private string DeliveryEmailFormat(Order order)
+        {
+            string Result = $"Your Package With Id = {Id} Was Delivered.\nOrder Information :\n";
+            Result += $"Sender Address : {order.SenderAddress}\nReciever Address : {order.ReceiverAddress}\nPost Type : {DataCreator.PostType(order.PostType)}" +
+                $"\nPackage Type : {DataCreator.PackageType(order.PackageType)}\nHas Expensive Content : {DataCreator.HasExpensiveContent(order.HasExpensiveContent)}\n" +
+                $"Final Price : {order.FinalPrice}\nPhone : {order.Phone}\nCreation Date : {order.CreatedAt}\n";
+            Result += "Please Share Us Your Comment.";
+            return Result;
         }
         public void SaveChanges()
         {
             Order Order = ReturnOrder(Id);
             Order.ShippingStatus = ShippingStatus.SelectedIndex;
             _db.SaveChanges();
+            string CurCustomerSSN = Order.CustomerSSN;
+            var CurCustomerEmail = _db.Customers.Where(n => n.SSN == CurCustomerSSN).Select(n => n.Email).First();
+            if (ShippingStatus.SelectedIndex == 3)
+                EmailSender.SendEmail("Delivery", DeliveryEmailFormat(Order), CurCustomerEmail);
+
             var Window = new EmployeePanel(Employee);
             Window.Show();
             this.Close();
@@ -77,6 +96,13 @@ namespace WpfPostCompany
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void BackToEmployeePanel(object sender, RoutedEventArgs e)
+        {
+            var Window = new EmployeePanel(Employee);
+            Window.Show();
+            this.Close();
         }
     }
 }

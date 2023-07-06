@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CsvHelper.Configuration.Attributes;
+using DataAccess;
 using DataAccess.Models;
 
 namespace WpfPostCompany
@@ -20,7 +22,9 @@ namespace WpfPostCompany
     /// </summary>
     public partial class PackageInfoWindow : Window
     {
+        PostCompanyEntities dbContext = new PostCompanyEntities();
         public Customer customer;
+        Order Order;
         public PackageInfoWindow(Customer customer)
         {
             InitializeComponent();
@@ -29,26 +33,62 @@ namespace WpfPostCompany
 
         private void search_btn_Click(object sender, RoutedEventArgs e)
         {
-            PostCompanyEntities dbContext = new PostCompanyEntities();
-            int curOrderId = Convert.ToInt16(order_id_txtbox.Text);
-            var orders = dbContext.Orders.Where(o => o.OrderID == curOrderId && o.CustomerSSN == customer.SSN).ToList();
-            if (orders.Count == 0)
-                MessageBox.Show("No order with this id was found", "search", MessageBoxButton.OK);
-            else
+            order_panel.Visibility = Visibility.Hidden;
+            try
             {
-                order_panel.Visibility = Visibility.Visible;
-                Order order = orders[0];
-                order_info_label.Content = order.SenderAddress + "\n" +
-                                            order.ReceiverAddress + "\n" +
-                                            order.Weight + "\n" +
-                                            order.CustomerSSN;
-                if(order.ShippingStatus == 1)
-                {
-                    submit_btn.IsEnabled = true;
-                }
-                                            
-            }
+                int curOrderId = Convert.ToInt16(order_id_txtbox.Text);
+                var order = dbContext.Orders.Where(o => o.OrderID == curOrderId && o.CustomerSSN == customer.SSN).FirstOrDefault();
 
+                if (order == null)
+                {
+                    order_id_txtbox.Text = "";
+                    throw new Exception("order not found");
+                }
+                else
+                {
+                    order_panel.Visibility = Visibility.Visible;
+                    Order = order;
+                    order_info_label.Content = Order.SenderAddress + "\n" +
+                                                Order.ReceiverAddress + "\n" +
+                                                Order.Weight + "\n" +
+                                                Order.CustomerSSN;
+
+                    if (order.Comment != null)
+                    {
+                        CommentTxt.Text = order.Comment;
+                        CommentTxt.IsReadOnly = true;
+                    }
+                    else if (Order.ShippingStatus == 3)
+                    {
+                        submit_btn.IsEnabled = true;
+                        CommentTxt.IsReadOnly = false;
+                    }
+                    else
+                        throw new Exception("order has not been deliverded");
+                    order_id_txtbox.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void SubmitCommentButton(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (CommentTxt.Text == "")
+                    throw new Exception("please enter comment");
+                Order.Comment = CommentTxt.Text;
+                dbContext.SaveChanges();
+                var Window = new CustomerWindow(customer);
+                Window.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

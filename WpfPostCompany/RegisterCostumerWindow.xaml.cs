@@ -58,9 +58,14 @@ namespace WpfPostCompany
                 throw new Exception("invalid email format");
 
             _db.Customers.Add(_customer);
-            _customer.UserName = DataCreater.CreateCustomerUserName();
-            _customer.Password = DataCreater.CreateCustomerPassword();
+
+            string UserName = DataCreator.CreateCustomerUserName();
+            string Password = DataCreator.CreateCustomerPassword();
+
+            _customer.UserName = UserName;
+            _customer.Password = Password;
             _db.SaveChanges();
+            EmailSender.SendEmail("Welcome", $"Your Registration Done Successfully\nUserName : {UserName}\nPassword : {Password}", Email.Text);
             var Window = new EmployeePanel(Employee);
             MessageBox.Show("customer registered successfully");
             Thread.Sleep(1000);
