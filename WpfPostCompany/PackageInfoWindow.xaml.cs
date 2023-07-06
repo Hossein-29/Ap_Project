@@ -39,8 +39,7 @@ namespace WpfPostCompany
                 int curOrderId = Convert.ToInt16(order_id_txtbox.Text);
                 var order = dbContext.Orders.Where(o => o.OrderID == curOrderId && o.CustomerSSN == customer.SSN).FirstOrDefault();
 
-                
-                else if (order == null)
+                 if (order == null)
                 {
                     order_id_txtbox.Text = "";
                     throw new Exception("order not found");
