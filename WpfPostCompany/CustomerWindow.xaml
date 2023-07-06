@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Column="0">
-            <StackPanel Background="Aqua">
+            <StackPanel Background="Purple">
                 <Button Name="report_btn" Width="200" Height="70" Margin="50" FontSize="30" Click="report_btn_Click">Report</Button>
                 <Button Name="package_info_btn"  Width="200" Height="70" Margin="50" FontSize="30" Click="package_info_btn_Click">Package info</Button>
                 <Button Name="wallet_btn"  Width="200" Height="70" Margin="50" FontSize="30" Click="wallet_btn_Click">Wallet</Button>
@@ -21,7 +21,7 @@
             </StackPanel>
         </Border>
 
-        <Border Grid.Column="1" Background="Yellow">
+        <Border Grid.Column="1" Background="Gray">
             <StackPanel>
                 <Label Name="customer_info_lbl" FontSize="50" Margin="20">jgdkjfksllf</Label>
             </StackPanel>

@@ -25,39 +25,42 @@ namespace WpfPostCompany
         {
             InitializeComponent();
             this.customer = customer;
-            customer_info_lbl.Content = customer.UserName + "\n" +
-                                        customer.FirstName + " " + customer.LastName + "\n" +
-                                        customer.Phone + "\n" +
-                                        customer.SSN + "\n" +
-                                        customer.Email + "\n";
+            customer_info_lbl.Content = "Username : " + customer.UserName + "\n" +
+                                        "Full name : " + customer.FirstName + " " + customer.LastName + "\n" +
+                                        "Phone : " + customer.Phone + "\n" +
+                                        "SSN : " + customer.SSN + "\n" +
+                                        "Email : " + customer.Email + "\n";
         }
 
         private void report_btn_Click(object sender, RoutedEventArgs e)
         {
             ReportWindow Window = new ReportWindow(customer);
-            Window.Show();
-            this.Close();
+            this.Hide();
+            Window.ShowDialog();
+            this.ShowDialog();
         }
 
         private void package_info_btn_Click(object sender, RoutedEventArgs e)
         {
             PackageInfoWindow Window = new PackageInfoWindow(customer);
-            Window.Show();
-            this.Close();
+            this.Hide();
+            Window.ShowDialog();
+            this.ShowDialog();
         }
 
         private void wallet_btn_Click(object sender, RoutedEventArgs e)
         {
             WalletWindow Window = new WalletWindow(customer);
-            Window.Show();
-            this.Close();
+            this.Hide();
+            Window.ShowDialog();
+            this.ShowDialog();
         }
 
         private void profile_btn_Click(object sender, RoutedEventArgs e)
         {
-            ProfileWindow profileWindow = new ProfileWindow(customer);
+            ProfileWindow Window = new ProfileWindow(customer);
             this.Hide();
-            profileWindow.ShowDialog();
+            Window.ShowDialog();
             this.ShowDialog();
         }
     }
