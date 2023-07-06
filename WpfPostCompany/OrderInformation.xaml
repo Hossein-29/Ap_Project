@@ -32,10 +32,11 @@
         <Grid Margin="16,78,385,30">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="100"></RowDefinition>
                 <RowDefinition Height="80"></RowDefinition>
                 <RowDefinition Height="90"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="90"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.Background>
@@ -68,10 +69,10 @@
                     <ColumnDefinition Width="360"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="2">
-                    <Label FontFamily="Californian FB" FontSize="30" Content="Package Type : " Name="PackageType"></Label>
+                    <Label FontFamily="Californian FB" FontSize="30" Content="Package Type : " Name="PackageType" Margin="1,0,-1,0"/>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <Label FontFamily="Californian FB" FontSize="30" Name="PostType" Content="PostType : "></Label>
+                    <Label FontFamily="Californian FB" FontSize="30" Name="PostType" Content="PostType : " Margin="2,0,-2,0"></Label>
                 </Grid>
                 <Grid Grid.Column="0">
                     <Label FontFamily="Californian FB" FontSize="30" Content="Weight : " Name="Weight"></Label>
@@ -100,7 +101,7 @@
                 </Grid>
                 <Grid Grid.Column="1">
                     <Label Content="Status" x:Name="Status" FontFamily="Californian FB" FontSize="30"></Label>
-                    <ComboBox Margin="118,-10,66,65" x:Name="ShippingStatus" FontSize="25" Padding="40,10,5,3">
+                    <ComboBox Margin="118,8,99,28" x:Name="ShippingStatus" FontSize="25" Padding="40,10,5,3">
                         <ComboBoxItem Content="Registered"></ComboBoxItem>
                         <ComboBoxItem Content="Ready To Send"></ComboBoxItem>
                         <ComboBoxItem Content="Posted"></ComboBoxItem>
@@ -109,6 +110,9 @@
                 </Grid>
             </Grid>
 
+            <Grid Grid.Row="6">
+                <Label Content="Comment : " x:Name="CommentLbl" FontSize="25"></Label>
+            </Grid>
             
         </Grid>
 

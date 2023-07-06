@@ -63,6 +63,15 @@ namespace WpfPostCompany
             Phone.Content += Order.Phone;
             Price.Content += Order.FinalPrice.ToString();
         }
+        private string DeliveryEmailFormat(Order order)
+        {
+            string Result = $"Your Package With Id = {Id} Was Delivered.\nOrder Information :\n";
+            Result += $"Sender Address : {order.SenderAddress}\nReciever Address : {order.ReceiverAddress}\nPost Type : {DataCreator.PostType(order.PostType)}" +
+                $"\nPackage Type : {DataCreator.PackageType(order.PackageType)}\nHas Expensive Content : {DataCreator.HasExpensiveContent(order.HasExpensiveContent)}\n" +
+                $"Final Price : {order.FinalPrice}\nPhone : {order.Phone}\nCreation Date : {order.CreatedAt}\n";
+            Result += "Please Share Us Your Comment.";
+            return Result;
+        }
         public void SaveChanges()
         {
             Order Order = ReturnOrder(Id);
@@ -71,7 +80,7 @@ namespace WpfPostCompany
             string CurCustomerSSN = Order.CustomerSSN;
             var CurCustomerEmail = _db.Customers.Where(n => n.SSN == CurCustomerSSN).Select(n => n.Email).First();
             if (ShippingStatus.SelectedIndex == 3)
-                EmailSender.SendEmail("Delivery", $"Your Package With OrderID ({OrderID.Content}) Was Delivered.\nShare Us Your Comment", CurCustomerEmail);
+                EmailSender.SendEmail("Delivery", DeliveryEmailFormat(Order), CurCustomerEmail);
 
             var Window = new EmployeePanel(Employee);
             Window.Show();

@@ -58,7 +58,7 @@
 
 
             <Label Content="Reciever Address" Margin="41,129,684,0" VerticalAlignment="Top" Height="30" FontFamily="Agency FB" FontSize="20"/>
-            <TextBox x:Name="RecieverAddress" Text="{Binding ReceiverAddress}" Margin="195,127,48,0" TextWrapping="Wrap" FontSize="28" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" Padding="0,-6,0,0" Width="605">
+            <TextBox x:Name="RecieverAddress" Text="{Binding ReceiverAddress}" Margin="195,127,48,0" TextWrapping="Wrap" FontSize="28" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" Padding="0,-6,0,0">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
@@ -79,15 +79,15 @@
             <Label Content="Does The Package Contain Expensive Content?" HorizontalAlignment="Left" Margin="124,290,0,0" VerticalAlignment="Top" Width="456" FontFamily="Gadugi" FontSize="20" Foreground="#FFF20F08"/>
 
 
-            <Label Content="Package Weight (Kg)" Margin="35,354,674,0" VerticalAlignment="Top" Height="40" FontFamily="Agency FB" FontSize="20"/>
-            <TextBox x:Name="PackageWeight" Text="{Binding Weight}" Margin="193,352,450,0" TextWrapping="Wrap" FontSize="28" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" Padding="0,-6,0,0">
+            <Label Content="Package Weight (Kg)" Margin="41,354,641,0" VerticalAlignment="Top" Height="40" FontFamily="Agency FB" FontSize="20"/>
+            <TextBox x:Name="PackageWeight" Text="{Binding Weight}" Margin="211,353,432,0" TextWrapping="Wrap" FontSize="28" VerticalAlignment="Top" Height="35" Background="#FFFAFAFA" SelectionBrush="White" BorderBrush="#FFE5E5E5" Padding="0,-6,0,0">
                 <TextBox.Effect>
                     <DropShadowEffect ShadowDepth="8" RenderingBias="Quality" BlurRadius="15" Direction="325" Opacity="0.4"/>
                 </TextBox.Effect>
             </TextBox>
             <Label Content="Post Type" HorizontalAlignment="Left" Margin="442,221,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="20" Width="100"/>
 
-            <ComboBox Margin="589,213,103,271" Width="NaN" x:Name="PostType" FontSize="15" BorderThickness="1,1,1,1" Text="" Padding="20,3,5,3">
+            <ComboBox Margin="589,213,103,271" x:Name="PostType" FontSize="15" BorderThickness="1,1,1,1" Text="" Padding="20,3,5,3">
                 <ComboBox.Background>
                     <LinearGradientBrush EndPoint="0,1">
                         <GradientStop Color="#FFF0F0F0"/>
