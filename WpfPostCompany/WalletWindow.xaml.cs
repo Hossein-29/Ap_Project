@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DataAccess;
 using DataAccess.Models;
+using PdfSharp;
+using PdfSharp.Drawing;
+using PdfSharp.Drawing.Layout;
+using PdfSharp.Pdf;
 
 namespace WpfPostCompany
 {
@@ -56,7 +61,22 @@ namespace WpfPostCompany
                 }
                 customer.AccountBalance += totalPay;
                 account_balance_lbl.Content = customer.AccountBalance.ToString();
-                MessageBox.Show("Charged Successfully", "Wallet", MessageBoxButton.OK);
+                var beSaved = MessageBox.Show("Charged Successfully\nDo want it to save as PDF?", "Wallet", MessageBoxButton.YesNo);
+                if(beSaved == MessageBoxResult.Yes)
+                {
+                    PdfDocument document = new PdfDocument();
+                    PdfPage page = document.AddPage();
+                    
+                    XGraphics gfx = XGraphics.FromPdfPage(page);
+                    XFont font = new XFont("Segoe UI", 20, XFontStyle.Bold);
+                    XTextFormatter xTextFormatter = new XTextFormatter(gfx);
+                    var paymentString = $" {DateTime.Now} \n Card Number : {card_number_txtbox.Text} \n Total Pay : {total_pay_txtbox.Text} \n Account Balance : {customer.AccountBalance}";
+                    xTextFormatter.DrawString(paymentString, font, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormat.TopLeft);
+                    string fileName = @"..\..\..\DataAccess\Payments.pdf";
+
+                    document.Save(fileName);
+                    Process.Start(fileName);
+                }
                 card_number_txtbox.Text = cvv_number_txtbox.Text = year_txtbox.Text = month_txtbox.Text = total_pay_txtbox.Text = "";
                 
                 PostCompanyEntities context = new PostCompanyEntities();

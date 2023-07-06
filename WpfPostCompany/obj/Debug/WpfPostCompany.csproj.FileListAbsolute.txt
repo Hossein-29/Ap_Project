@@ -51,3 +51,9 @@ C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\WpfPostCompany.pdb
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\ProfileWindow.g.cs
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\ProfileWindow.baml
 C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\obj\Debug\App.baml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\PdfSharp.Charting.dll
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\PdfSharp.dll
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\PdfSharp.xml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\PdfSharp.Charting.xml
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\ALMAS\Desktop\Ap_Project\WpfPostCompany\bin\Debug\de\PdfSharp.Charting.resources.dll
