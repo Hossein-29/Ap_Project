@@ -1,2 +1,7 @@
-SenderAddress,ReceiverAddress,Weight,PackageType,Phone,PostType,CustomerSSN,OrderID,ShippingStatus,Comment,FinalPrice,HasExpensiveContent,CreatedAt,FirstName,LastName,SSN,Email,Phone,UserName,Password,AccountBalance
-mkm,mkmkkm,15,1,,1,23232,8,0,,783000,0,07/04/2023 17:15:08,taha,shahidi,23232,yahoo,0912,shdii,2132,90
+SenderAddress,ReceiverAddress,PackageType,Weight,PostType,Phone,CustomerSSN,OrderID,ShippingStatus,Comment,FinalPrice,HasExpensiveContent,CreatedAt
+o,p,0,1,0,,23232,2,3,hossein,24000,1,07/04/2023 17:16:15
+tehran,jannat abad,0,1,0,,23232,3,3,varyyy gooood,24000,1,07/04/2023 10:23:15
+gharb tehran,narmak,1,90,0,,23232,5,0,,3222000,0,07/04/2023 13:51:08
+tehran pars - farhang sara,sadeghiyed - gas station pleak 32,1,90,0,09218134321,23232,6,0,,3222000,0,07/04/2023 13:52:15
+shoosh,porozi pelak 21 vahed 1121,1,324,0,09113399855,23232,7,1,,130000,1,02/21/2022 12:02:45
+chitgar,oonja,2,2,0,,23232,9,3,goooodddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd,69120,1,07/05/2023 11:32:44

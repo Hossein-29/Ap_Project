@@ -63,7 +63,7 @@ namespace DataAccess
             var Orders = list.OrderBy(x => x.CreatedAt).Select(n => n).ToList();
             return Orders;
         }
-        static public List<Order> AdvancedSearch(string Price, string Weight, int PackageType, int PostType, PostCompanyEntities _db, List<Order> Orders,string UserType ,string SSN = "")
+        static public List<Order> AdvancedSearch(string Price, string Weight, int PackageType, int PostType, PostCompanyEntities _db, List<Order> Orders, string UserType, string SSN = "")
         {
             if (UserType == "Employee")
             {
@@ -88,15 +88,14 @@ namespace DataAccess
             if (PackageType != -1)
             {
                 Orders = (from order in Orders
-                          select order).Intersect(SearchByPostType(PackageType, _db)).ToList();
+                          select order).Intersect(SearchByPackageType(PackageType, _db)).ToList();
             }
-          
+
             if (PostType != -1)
             {
                 Orders = (from order in Orders
                           select order).Intersect(SearchByPostType(PostType, _db)).ToList();
             }
-            MessageBox.Show(Orders.Count.ToString());
             return Orders;
         }
     }
