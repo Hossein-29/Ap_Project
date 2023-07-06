@@ -61,7 +61,7 @@ namespace WpfPostCompany
             {
                 Weight -= 0.5;
                 int Coefficient = 0;
-                Coefficient += (int)Math.Ceiling(Weight / 0.5);
+                Coefficient += (int)Math.Floor(Weight / 0.5);
                 if (Coefficient != 0)
                     Price *= Math.Pow(1.2, Coefficient);
             }
@@ -89,6 +89,13 @@ namespace WpfPostCompany
 
             if (Result == MessageBoxResult.OK)
             {
+                var CurCustomer = _db.Customers.Where(c => c.SSN == SSN).First();
+
+                if (CurCustomer.AccountBalance < FinalPrice())
+                    throw new Exception("your account balance in not enough");
+                else
+                    CurCustomer.AccountBalance -= FinalPrice();
+                
                 _order.OrderID = _db.Orders.Count() + 1;
                 _order.CustomerSSN = SSN;
                 _order.PackageType = PackageType.SelectedIndex;
@@ -109,12 +116,12 @@ namespace WpfPostCompany
                 Window.Show();
                 this.Close();
             }
-            //else
-            //{
-            //    var Window = new EmployeePanel(Employee);
-            //    Window.Show();
-            //    this.Close();
-            //}
+            else
+            {
+                var Window = new EmployeePanel(Employee);
+                Window.Show();
+                this.Close();
+            }
         }
         private void CalculateFinalPriceBtn(object sender, RoutedEventArgs e)
         {
