@@ -95,5 +95,12 @@ namespace WpfPostCompany
         {
             payment_border.Visibility = Visibility.Visible;
         }
+
+        private void BackToLoginPanel(object sender, RoutedEventArgs e)
+        {
+            var Window = new CustomerWindow(customer);
+            Window.Show();
+            this.Close();
+        }
     }
 }

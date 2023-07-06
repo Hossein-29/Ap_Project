@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPostCompany"
         mc:Ignorable="d"
-        Title="ProfileWindow" Height="450" Width="800">
+        Title="ProfileWindow" Height="720" Width="1250" WindowStartupLocation="CenterScreen">
     <Grid Background="Purple">
         <Border>
-            <StackPanel Background="BlueViolet" Width="500" VerticalAlignment="Center">
+            <StackPanel Background="BlueViolet" Width="700" Height="450" VerticalAlignment="Top" Margin="0,50,0,0">
                 <Label FontSize="30" VerticalAlignment="Center" Width="100">Profile</Label>
                 <StackPanel Orientation="Horizontal">
-                    <Label FontSize="20">First Name : </Label>
+                    <Label FontSize="20">First Name :</Label>
                     <TextBox IsEnabled="false" SelectionBrush="Green" FontSize="20" Name="first_name_txtbox">Hossein</TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -19,19 +19,19 @@
                     <TextBox IsEnabled="false" SelectionBrush="Green" FontSize="20" Name="last_name_txtbox">Babazadeh</TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label FontSize="20">SSN : </Label>
+                    <Label FontSize="20">SSN :</Label>
                     <TextBox IsEnabled="false" SelectionBrush="Green" FontSize="20" Name="snn_txtbox">4580569874</TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label FontSize="20">Email : </Label>
+                    <Label FontSize="20">Email :</Label>
                     <TextBox IsEnabled="false" SelectionBrush="Green" FontSize="20" Name="email_txtbox">hosseinbb@gmail.com</TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label FontSize="20">Phone : </Label>
+                    <Label FontSize="20">Phone :</Label>
                     <TextBox IsEnabled="false" SelectionBrush="Green" FontSize="20" Name="phone_txtbox">09387455896</TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label FontSize="20">Username : </Label>
+                    <Label FontSize="20">Username :</Label>
                     <TextBox SelectionBrush="Green"  FontSize="20" Name="username_txtbox" MinWidth="100">random username</TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -43,11 +43,17 @@
                     <TextBox IsEnabled="false" SelectionBrush="Green" FontSize="20" Name="account_balance_txtbox">15000</TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-
                     <Button Width="120" Height="30" Margin="10, 20" HorizontalAlignment="Right" Background="PaleVioletRed" Foreground="White" FontSize="15" Name="current_btn" Click="current_btn_Click">Current</Button>
                     <Button Width="120" Height="30" Margin="10, 20" HorizontalAlignment="Right" Background="LightGreen" Foreground="White" FontSize="15" Name="save_changes_btn" Click="save_changes_btn_Click">Save Changes</Button>
                 </StackPanel>
             </StackPanel>
         </Border>
+        <Button Content="Back" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="#FFF6F6F6" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Background="#FF040404" Click="BackToLoginPanel" Margin="34,559,1013,80">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30,30,30,30"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>

@@ -39,7 +39,7 @@ namespace WpfPostCompany
                 int curOrderId = Convert.ToInt16(order_id_txtbox.Text);
                 var order = dbContext.Orders.Where(o => o.OrderID == curOrderId && o.CustomerSSN == customer.SSN).FirstOrDefault();
 
-                 if (order == null)
+                if (order == null)
                 {
                     order_id_txtbox.Text = "";
                     throw new Exception("order not found");
@@ -90,6 +90,13 @@ namespace WpfPostCompany
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void BackToLoginPanel(object sender, RoutedEventArgs e)
+        {
+            var Window = new CustomerWindow(customer);
+            Window.Show();
+            this.Close();
         }
     }
 }

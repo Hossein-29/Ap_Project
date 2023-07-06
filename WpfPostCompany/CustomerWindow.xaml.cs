@@ -35,33 +35,36 @@ namespace WpfPostCompany
         private void report_btn_Click(object sender, RoutedEventArgs e)
         {
             ReportWindow Window = new ReportWindow(customer);
-            this.Hide();
-            Window.ShowDialog();
-            this.ShowDialog();
+            Window.Show();
+            this.Close();
         }
 
         private void package_info_btn_Click(object sender, RoutedEventArgs e)
         {
             PackageInfoWindow Window = new PackageInfoWindow(customer);
-            this.Hide();
-            Window.ShowDialog();
-            this.ShowDialog();
+            Window.Show();
+            this.Close();
         }
 
         private void wallet_btn_Click(object sender, RoutedEventArgs e)
         {
             WalletWindow Window = new WalletWindow(customer);
-            this.Hide();
-            Window.ShowDialog();
-            this.ShowDialog();
+            Window.Show();
+            this.Close();
         }
 
         private void profile_btn_Click(object sender, RoutedEventArgs e)
         {
             ProfileWindow Window = new ProfileWindow(customer);
-            this.Hide();
-            Window.ShowDialog();
-            this.ShowDialog();
+            Window.Show();
+            this.Close();
+        }
+
+        private void BackToLoginPanel(object sender, RoutedEventArgs e)
+        {
+            var Window = new LoginWindow();
+            Window.Show();
+            this.Close();
         }
     }
 }

@@ -44,7 +44,7 @@ namespace WpfPostCompany
             var curCustomer = context.Customers.Where(c => c.UserName == customer.UserName).First();
             var tempCustomer = context.Customers.Where(c => c.UserName == username_txtbox.Text && c.UserName != customer.UserName).FirstOrDefault();
             var tempEmployee = context.Employees.Where(emp => emp.UserName == username_txtbox.Text && emp.UserName != customer.UserName).FirstOrDefault();
-            if(tempCustomer != null || tempEmployee != null)
+            if (tempCustomer != null || tempEmployee != null)
             {
                 MessageBox.Show("Username already exists", "Profile", MessageBoxButton.OK);
             }
@@ -70,6 +70,13 @@ namespace WpfPostCompany
         {
             username_txtbox.Text = customer.UserName;
             password_txtbox.Text = customer.Password;
+        }
+
+        private void BackToLoginPanel(object sender, RoutedEventArgs e)
+        {
+            var Window = new CustomerWindow(customer);
+            Window.Show();
+            this.Close();
         }
     }
 }
