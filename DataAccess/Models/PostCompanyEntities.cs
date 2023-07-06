@@ -8,7 +8,7 @@ namespace DataAccess.Models
     public partial class PostCompanyEntities : DbContext
     {
         public PostCompanyEntities()
-            : base("name=PostCompanyEntitiesDB")
+            : base("name=PostCompanyEntities")
         {
         }
 

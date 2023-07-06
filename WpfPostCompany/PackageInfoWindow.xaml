@@ -14,11 +14,11 @@
 
         <Border Grid.Column="0" Margin="10" Background="Purple" >
             <StackPanel VerticalAlignment="Center">
-                <TextBox Name="order_id_txtbox" Width="120" FontSize="20" Margin="50, 10"></TextBox>
-                <Button Name="search_btn" Width="80" FontSize="20" Background="DarkGreen" Padding="10, 0" Click="search_btn_Click">serach</Button>
+                <TextBox Name="order_id_txtbox" Width="150" Height="40" FontSize="20" Margin="50, 10"></TextBox>
+                <Button Name="search_btn" Width="100" Height="40" FontSize="20" Background="Blue" Foreground="White" Padding="10, 0" Click="search_btn_Click">Search</Button>
             </StackPanel>
         </Border>
-        <Border Grid.Column="1" Background="Yellow">
+        <Border Grid.Column="1" Margin="10" Background="BlueViolet">
             <StackPanel Name="order_panel" Visibility="Hidden" Margin="20">
                 <Label Name="order_info_label" FontSize="15">sdfsfdsfs</Label>
                 <StackPanel Name="comment_panel" Margin="0, 20, 0, 0">

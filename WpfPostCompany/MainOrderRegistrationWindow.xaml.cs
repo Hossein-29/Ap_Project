@@ -85,7 +85,7 @@ namespace WpfPostCompany
                 throw new Exception("invalid phone number");
 
             var Result = CustomMessageBox.ShowOKCancel($"Final Price : {FinalPrice()}", "", "Register", "Cancel");
-
+           
 
             if (Result == MessageBoxResult.OK)
             {
