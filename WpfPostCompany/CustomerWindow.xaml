@@ -24,7 +24,7 @@
         <Border Grid.Column="1" Background="Gray">
             <StackPanel>
                 <Label Name="customer_info_lbl" FontSize="50" Margin="20">jgdkjfksllf</Label>
-                <Button Content="Back" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="#FFF6F6F6" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Background="#FF040404" Click="BackToLoginPanel" Width="266" HorizontalAlignment="Right" Margin="0,459,39,0">
+                <Button Content="Back" Height="70" BorderBrush="#FFFAFAFA" BorderThickness="0,0,0,0" Foreground="#FFF6F6F6" FontSize="33" FontFamily="Bahnschrift SemiLight Condensed" Cursor="Hand" Background="#FF040404" Click="BackToLoginPanel" Width="266" HorizontalAlignment="Right" Margin="0,100,39,0">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="30,30,30,30"/>

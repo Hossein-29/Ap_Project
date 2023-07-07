@@ -47,6 +47,7 @@ namespace WpfPostCompany
 
                 else
                 {
+                    CommentTxt.Text = "";
                     order_panel.Visibility = Visibility.Visible;
                     Order = order;
                     order_info_label.Content = Order.SenderAddress + "\n" +

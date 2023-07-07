@@ -62,6 +62,7 @@ namespace WpfPostCompany
             HasExpensiveContent.Content += DataCreator.HasExpensiveContent(Order.HasExpensiveContent);
             Phone.Content += Order.Phone;
             Price.Content += Order.FinalPrice.ToString();
+            CommentLbl.Content += Order.Comment;
         }
         private string DeliveryEmailFormat(Order order)
         {
